@@ -264,6 +264,19 @@ a.twittericon:hover {
   background-position: 0 -24px;
   }
 
+a.githubicon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  text-decoration: none;
+  background: url("./img/twittericon.png");
+  margin-left: 25px;
+  }
+
+a.githubicon:hover {
+  background-position: 0 -24px;
+  }
+
 
 #footer {
   background: url("../img/footer.gif") repeat-x scroll center bottom #121f1f;
