@@ -1,0 +1,74 @@
+```{r}
+treatment_table <- data.frame(Treatment=c("A", "B", "C"),
+                              costDrug=c(2500, 5300, 16000),
+                              costMI=c(50000, 50000, 50000),
+                              probMI=c(0.10, 0.035, 0.02),
+                              costSE=c(3000, 4000, 2300),
+                              probSE=c(0.1, 0.04, 0.003),
+                              costComp=c(16500, 3000, 3500),
+                              probComp=c(0.3, 0.1, 0.05),
+                              lySE=c(3, 3.5, 1.5),
+                              lyMI=c(10, 10, 10),
+                              lyComp=c(2, 2.5, 2),
+                              utilMI=c(1 - 0.812, 1 - 0.812, 1 - 0.812),
+                              utilSE=c(1 - 0.92, 1 - 0.92, 1 - 0.92),
+                              utilComp=c(1 - 0.90, 1 - 0.90, 1 - 0.90))
+
+dataA <- subset(treatment_table, Treatment == "A")
+dataB <- subset(treatment_table, Treatment == "B")
+dataC <- subset(treatment_table, Treatment == "C")
+```
+
+```{r}
+#c: drug cost, c1: MI cost, c2: SE cost, c3: complication cost
+compute_cost <- function(c, c1, p1, c2, p2, c3, p3){
+  path1 <- (p1*p2*p3)*(c + c1 + c2 + c3)
+  path2 <- (p1*p2*(1-p3))*(c + c1 + c2)
+  path3 <- (p1*(1-p2))*(c + c1)
+  path4 <- ((1-p1)*p2*p3)*(c + c2 + c3)
+  path5 <- ((1-p1)*p2*(1-p3))*(c + c2)
+  path6 <- ((1-p1)*(1-p2))*(c)
+  return(c(path1, path2, path3, path4, path5, path6))
+}
+
+compute_icer <- function(c1, c2, u1, u2){
+  (c2 - c1)/(u2 - u1)
+}
+```
+
+```{r}
+sensitivity <- function(c, c1, p1, c2, p2, c3, p3, var=0.2, n=1e4){
+  sampled_params <- data.frame(drug_cost=runif(n, c-(c*var), c+(c*var)),
+                                   se1_cost=runif(n,c1-abs(c1*var), c1+abs(c1*var)),
+                                   se1_prob=runif(n,p1-abs(p1*var), p1+abs(p1*var)),
+                                   se2_cost=runif(n,c2-abs(c2*var), c2+abs(c2*var)),
+                                   se2_prob=runif(n,p2-abs(p2*var), p2+abs(p2*var)),
+                                   se3_cost=runif(n,c3-abs(c3*var), c3+abs(c3*var)),
+                                   se3_prob=runif(n,p3-abs(p3*var), p3+abs(p3*var)))
+                              
+  apply(sampled_params, 1, function(x) compute_cost(x[1], x[2], x[3], x[4], x[5], x[7], x[7]))
+}
+```
+
+```{r}
+## Compute treatment costs
+expected_cost_A <- compute_cost(dataA$costDrug, dataA$costMI, dataA$probMI, dataA$costSE, dataA$probSE, dataA$costComp, dataA$probComp)
+expected_cost_B <- compute_cost(dataB$costDrug, dataB$costMI, dataB$probMI, dataB$costSE, dataB$probSE, dataB$costComp, dataB$probComp)
+expected_cost_C <- compute_cost(dataC$costDrug, dataC$costMI, dataC$probMI, dataC$costSE, dataC$probSE, dataC$costComp, dataC$probComp)
+
+## Compute life years
+expected_ly_A <- compute_cost(20, -dataA$lyMI, dataA$probMI, -dataA$lySE, dataA$probSE, -dataA$lyComp, dataA$probComp)
+expected_ly_B <- compute_cost(20, -dataB$lyMI, dataB$probMI, -dataB$lySE, dataB$probSE, -dataB$lyComp, dataB$probComp)
+expected_ly_C <- compute_cost(20, -dataC$lyMI, dataC$probMI, -dataC$lySE, dataC$probSE, -dataC$lyComp, dataC$probComp)
+
+## Expected utility reduction
+expected_util_A <- compute_cost(1, -dataA$utilMI, dataA$probMI, -dataA$utilSE, dataA$probSE, -dataA$utilComp, dataA$probComp)
+expected_util_B <- compute_cost(1, -dataB$utilMI, dataB$probMI, -dataB$utilSE, dataB$probSE, -dataB$utilComp, dataB$probComp)
+expected_util_C <- compute_cost(1, -dataC$utilMI, dataC$probMI, -dataC$utilSE, dataC$probSE, -dataC$utilComp, dataC$probComp)
+
+## Expected path utility
+
+
+## 
+
+```

@@ -1,0 +1,45 @@
+## Graphical summaries for one quantitative sample
+### Histograms
+The histogram breaks the range of data into smaller number of equal-width intervals (bins) producing graphical information
+about the observed distribution by highlighting where data values cluster. The histogram can use arbitrary intervals.
+
+```{r}
+require(ggplot2)
+
+# Some sample data
+sample_data <- 75 * rnorm(1000)
+sample_data <- data.frame(sample_data)
+
+# Histogram
+ggplot(sample_data, aes(x=sample_data)) + geom_histogram() +
+  labs(title="Histogram: sample data") + ylab("count") + xlab("value")
+```
+
+#### Improvements to the histogram
+The histogram can be improved by overlaying a kernel density function to give the viewer an idea about the continuous
+distribution of the data and by plotting the data points below with some jitter
+```{r}
+ggplot(sample_data, aes(x=sample_data)) + geom_histogram(aes(y=..density..), fill="white", color='black') +
+  geom_density(alpha=0.1, fill="darkred") + geom_point(aes(y=-0.0001), alpha=0.20, position=position_jitter(height=0.00005)) + 
+  labs(title="Histogram with Density") + ylab("Density") + xlab("Value")
+```
+
+### Boxplot
+The boxplot breaks up the range of data values into regions about the center of the data, measured by the median. The boxplot
+highlights outliers and provides a visual means to assess **normality**. The endpoints of the box are placed at the locations
+of the first and third quartiles. The location of the median is identified by the line in the box. The whiskers extend to the
+data points closest to but not on or outside the outlier fences, which are $1.5IQR$ from quartiles. Outliers are any 
+values outside the whiskers.
+
+```{r}
+ggplot(sample_data) + geom_boxplot(aes(x = "Sample data", y = sample_data)) + coord_flip() + 
+  labs(title="Boxplot: sample data")
+```
+
+#### Improvements to the boxplot
+The violin plot is a combination of a boxplot and a kernel density plot. They can be created using the `geom_violin()` in `ggplot2`.
+```{r}
+ggplot(sample_data, aes(x="sample", y=sample_data)) + geom_violin(fill="gray50") + 
+  geom_point(position = position_jitter(width=0.01), alpha=0.2) +
+  geom_boxplot(alpha=0.7) + coord_flip()
+```

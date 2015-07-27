@@ -1,0 +1,17 @@
+## Learning objectives
+1. Select graphical displays that meaningfully communicate properties of a sample.
+2. Assess the assumptions of the one-sample t-test visually
+3. Decide whether the mean of a populationis different from a hypothesized value.
+4. Recommend action based on a hypothesis test.
+
+## Inference for a population mean
+
+
+### Standard error, LLNN, and CLT
+The **standard error (SE)** is the standard deviation of the **sampling distribution** of a statistic. The **sampleing distribution** of a statistic is the distribution of that statistic, considered as a random variable, when derived from a random sample of size _n_.
+
+The **standard error of the mean (SEM)** is the standard deviation of the sample-mean's estimate of a population mean.
+
+```{r}
+population <- runif(1000, 0, 1)
+pop_mean <- mean(population)
