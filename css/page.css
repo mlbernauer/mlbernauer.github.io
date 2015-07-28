@@ -490,7 +490,7 @@ a.githubicon:hover {
 
 #footer {
   background: #121f1f;
-  position: fixed;
+  position: absolute;
   left: 0;
   bottom: 0;
   height: 70px;

@@ -277,9 +277,9 @@ a.githubicon:hover {
   background-position: 0 -24px;
   }
 
-
 #footer {
   background: #121f1f;
+  position: absolute;
   height: 70px;
   margin: 0px auto;
 }
