@@ -279,7 +279,7 @@ a.githubicon:hover {
 
 
 #footer {
-  background: url("../img/footer.gif") repeat-x scroll center bottom #121f1f;
+  background: #121f1f;
   height: 70px;
   margin: 0px auto;
 }
