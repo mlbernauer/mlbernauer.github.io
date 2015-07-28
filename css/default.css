@@ -269,7 +269,7 @@ a.githubicon {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  background: url("./img/twittericon.png");
+  background: url("../img/twittericon.png");
   margin-left: 25px;
   }
 
@@ -284,9 +284,9 @@ a.githubicon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
   #footer {
-  width:480px;
+  width:700px;
   }
 
   #header .nav {
