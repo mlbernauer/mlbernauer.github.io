@@ -488,13 +488,20 @@ a.githubicon:hover {
   }
 
 
+footer {
+  background: #121f1f;
+  text-align: center;
+  padding: 40px 0px;
+  clear: both;
+  margin-top: 50px;
+  display: inline-block;
+  width: 100%;
+}
+
 #footer {
   background: #121f1f;
-  position: absolute;
-  left: 0;
-  bottom: 0;
   height: 70px;
-  width: 100%;
+  margin: 0px auto;
 }
 
 @media (max-width:480px) {
