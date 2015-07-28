@@ -44,7 +44,7 @@ margin: auto;
 footer {
 text-align: center;
 padding: 40px 0px;
-background: 121f1f;
+background: #121f1f;
 clear: both;
 margin-top: 50px;
 display: inline-block;
@@ -180,7 +180,7 @@ margin: auto;
 
 
 a {
-  color: 121f1f;
+  color: #121f1f;
   text-decoration: none;
 }
 
@@ -205,7 +205,7 @@ h2 {
     font-size: 30px;
   font-family: 'Cambo', serif;
     margin-bottom: 10px;
-    color: 121f1f;
+    color: #121f1f;
 }
 
 h3 {
@@ -224,7 +224,7 @@ h4 {
   font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #6e6e6e;
+  color: #121f1f;
 
 }
 
@@ -258,7 +258,7 @@ h1
  font-size: 55px;
  letter-spacing: 1px;
  text-align: center;
- color:  121f1f;
+ color:  #121f1f;
  display: inline-block;
 }
 
@@ -363,7 +363,7 @@ line-height: 1.6em
 
 
 #home {
-background: url("banner-2.gif") repeat-x scroll center bottom 121f1f;
+background: url("banner-2.gif") repeat-x scroll center bottom #121f1f;
 height: 530px;
 padding-top: 280px;
 width: 100%;
@@ -484,7 +484,7 @@ a.twittericon:hover {
 
 
 #footer {
-  background: url("footer.gif") repeat-x scroll center bottom 121f1f;
+  background: url("footer.gif") repeat-x scroll center bottom #121f1f;
   height: 70px;
   margin: 0px auto;
 }
