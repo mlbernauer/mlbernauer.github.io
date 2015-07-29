@@ -134,6 +134,7 @@ margin: 22px 40px 0 0px;
 #home {
 background: scroll center bottom #121f1f;
 height: 600px;
+position: absolute;
 padding-top: 280px;
 width: 100%;
 
@@ -272,9 +273,9 @@ a.githubicon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 480px) {
   #footer {
-  width:700px;
+  width:480px;
   }
 
   #header .nav {
