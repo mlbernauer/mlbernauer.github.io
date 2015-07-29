@@ -41,14 +41,6 @@ div.content {
 margin: auto;
 }
 
-
-
-
-
-
-
-
-
 .tags {
 text-transform: lowercase;
 font-weight: 100;
@@ -65,15 +57,6 @@ margin: 0px;
   margin-right:20px;
   font-weight: bold
 }
-
-
-
-
-
-
-
-
-
 
 blockquote {
   margin: 20px 0px
@@ -92,6 +75,17 @@ background: #f7f7f7;
 text-align: left;
 color: #444;
 }
+
+.content a {
+  color: #0000EE;
+  text-decoration: none;
+}
+
+.content a:visited {
+  color: #551A8B;
+  text-decoration: none;
+}
+
 
 .back_button {
 position: absolute;
