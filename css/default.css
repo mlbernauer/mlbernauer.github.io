@@ -70,7 +70,6 @@ h1
 }
 
 /* NAVIGATION */
-
 #header {
 padding: 0px;
 position: fixed;
@@ -81,7 +80,6 @@ z-index: 10;
 -moz-box-shadow: 0 0 10px rgba(0,0,0,0.15);
 box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
-
 
 .transparent {
   zoom: 1;
@@ -111,7 +109,6 @@ margin: 22px 40px 0 0px;
 
 }
 
-
 /* SECTIONS */
 .wrap {
   margin: 0 auto;
@@ -134,7 +131,6 @@ margin: 22px 40px 0 0px;
    padding: 0 0 0 10px;
 }
 
-
 #home {
 background: scroll center bottom #121f1f;
 height: 600px;
@@ -142,7 +138,6 @@ padding-top: 280px;
 width: 100%;
 
 }
-
 
 #about {
     height: 350px;
@@ -161,7 +156,6 @@ width: 100%;
 #projects {
     padding-top: 110px;
 }
-
 
 #contact {
     height: 455px;
@@ -194,17 +188,12 @@ width: 600px;
     padding: 0px 24px 0px 24px;
 }
 
-
 .photo_container {
   float:left;
   width: 600px;
 }
 
-
-
 /* CONTACT */
-
-
 .social {
   text-align: center;
   margin: 0 auto;
@@ -328,6 +317,4 @@ margin: 0px 5px;
   .doublegulp {
     width: 90%;
   }
-
-
 }
