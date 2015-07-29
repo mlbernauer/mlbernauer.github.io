@@ -322,6 +322,7 @@ float: left;
 
 ul {
     list-style-type: circle;
+    margin-left: 10px;
 }
 
 #header .nav ul {
