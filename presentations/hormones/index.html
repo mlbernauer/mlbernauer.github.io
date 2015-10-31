@@ -8,16 +8,16 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="../css/reveal.css">
+		<link rel="stylesheet" href="../css/theme/black.css" id="theme">
 		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../css/print/pdf.css' : '../css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 		<!--[if lt IE 9]>
@@ -427,6 +427,50 @@
     </script>
 </section>
 
+<section data-markdown>
+    <script type="text/template">
+    ## Synthetic progestins
+    * 19-nortestosterone/third-generation agents are more effective gonadotropin inhibitors, have minimal estrogenic/androgenic activity
+    * Desogestrel, norgestimate lack androgen activity and are combined with estradiol for oral contraception
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+    ## Therapeutic uses
+    * Hormone replacement therapy
+    * Hormonal contraception
+    * Long-term ovarian suppression
+        * Medroxyprogesterone acetate is used for prolonged anovulation and amenorrhea, dysmenorrhea, endometriosis and bleeding
+    </script>
+</section>
+
+<section data-markdown>
+    <script type="text/template">
+    ## Contraindications, Cautions, & ADRs
+    * May increase blood pressure
+    * Androgenic progestins reduce HDL
+    * Combined progestin + estrogen in postmenopausal women may incrase breast cancer risk significantly
+    compared to women taking estrogen alone
+    </script>
+</section>
+
+<section>
+    <section data-markdown>
+        <script type="text/template">
+        # Steroid synthesis
+        </script>
+    </section>
+
+    <section data-markdown>
+        <script type="text/template">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Steroidogenesis.svg/676px-Steroidogenesis.svg.png" width="700" />
+        </script>
+    </section>
+
+
+</section>
+
 
 
 
@@ -434,8 +478,8 @@
  
 
 		</div>
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.js"></script>
 		<script>
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
@@ -447,12 +491,12 @@
 				transition: 'convex', // none/fade/slide/convex/concave/zoom
 				// Optional reveal.js plugins
 				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
+					{ src: '../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../plugin/notes/notes.js', async: true }
 				]
 			});
 
