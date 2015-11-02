@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js – The HTML Presentation Framework</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<link rel="stylesheet" href="../reveal/css/reveal.css">
+		<link rel="stylesheet" href="../reveal/css/theme/black.css" id="theme">
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+<section>
+    <section data-markdown>
+        <script type="text/template">
+        # Devices to Enhance Compliance
+    
+        _Jason T. McConville, Ph.D._
+   
+        <table>
+        <tr>
+        <th><img src="https://www.aspet.org/uploadedImages/Meeting/Annual_Meeting/Ferring%204C.jpg" width="200"/></th>
+        <th><img src="http://hsc.unm.edu/about/marketing/images/Logos/COP/cop2.jpg" width="300"/></th>
+        </tr>
+        </table>
+        </script>
+    </section>
+
+    <section data-markdown>
+        <script type="text/template">
+        ## Overview
+        * Factors Driving Development
+        * Current Medication Reminders
+            * e-pill
+            * Medicenter
+            * Medminder
+            * Smartphone app
+        * Wireless Medication Monitor
+        * Additional Functions
+        </script>
+    </section>
+</section>
+
+<section>
+    <section data-markdown>
+        <script type="text/template">
+        # Devices to Enhance Compliance
+        </script>
+    </section>
+    
+    <section data-markdown>
+        <script type="text/template">
+        ## Factors pushing for development
+        * Adherence can drastically reduce healthcare costs
+        * Increased connectivity
+            * Home wireless
+            * Smartphone use
+        * Individualized care
+        * Family concern
+        * fate of medications
+ 
+        </script>
+    </section>
+    
+    <section data-markdown>
+        <script type="text/template">
+        ## Medication Reminder
+        * Elderly
+        * Multiple medications
+        * Custom scheduling (o.d, b.i.d, t.i.d../reveal.)
+        * Automated prescription refill?
+            * Alternatively refill reminder?
+        </script>
+    </section>
+
+    <section data-markdown>
+        <script type="text/template">
+        ### Effect of adherence on healthcare cost (Cholesterolemia)
+        
+        | Adherence level | N | Medical ($) | Drug ($) | Total ($) | Hosp. risk (%)|
+        | --- | --- | --- | --- | --- | --- |
+        | 1-9 | 167 | 9,849 | 1067 | 10,916 | 26 |
+        | 20-39 | 216 | 6,830 | 1152 | 7,982 | 18 |
+        | 40-59 | 324 | 5,509 | 1,247 | 6,756 | 20 |
+        | 60-79 | 520 | 6,676 | 1,736 | 8,412 | 21 |
+        | 80-100 | 1,754 | 4,780 | 1,972 | 6,752 | 16 |
+        <div align="left">
+        <small>Impact of Medication Adherence on Hospitalization Risk and Helthcare Cost, M.C. Sokol _et al. Medical Care_, 4 3(6)521-530.</small></div>    
+        </script>
+    </section>
+
+    <section data-markdown>
+        <script type="text/template">
+        ## Observed Patient adherence
+        * At risk groups:
+            * Elderly, young, relatives
+        * Send notifications
+            * E.g. correctly taken, medication skipped
+        * Authorized recipients
+            * Family members, healthcare providers
+        </script>
+    </section>
+
+    <section data-markdown data-background="http://ep.yimg.com/ty/cdn/epill/icon-medsmart.gif">
+        <script type="text/template">
+        ## e-pill
+        * 4 large capacity pill compartments
+        * e-pill Multi-Alarm
+            * 37 daily alarm setting
+        * 'Missed Pill' feature eletronic pill reminder
+        * e-pill EzSET Multi-Alarm
+        * Dose-Alert
+        * Bottle notifier
+        </script>
+    </section>
+    </section>
+
+</section>
+    
+
+        </div>
+		</div>
+		<script src="../reveal/lib/js/head.min.js"></script>
+		<script src="../reveal/js/reveal.js"></script>
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+                parallaxBackgroundImage: 'http://www.think-grid.org/sites/default/files/2015_01_07-482461333_Supergrid-2.jpg',
+                parallaxBackgroundSize: '4000px',
+                parallaxBackgroundHorizontal: 20,
+                parallaxBackgroundVertical: 20,
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+	</body>
+</html>
