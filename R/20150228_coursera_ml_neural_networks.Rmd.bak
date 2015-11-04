@@ -1,11 +1,11 @@
 ## Neural Networks
-In the last exercise [Multi-class classification with logistic regression](http://mlbernauer.bitbucket.org/R/20150225_coursera_ml_multiclass_classification_logistic_regression.html) we implemented a multi-class classifier that was capable of recognizing handwritten digits. However,
+In the last exercise [Multi-class classification with logistic regression](http://mlbernauer.bitbucket.org/R/20150225_coursera_ml_multiclass_classification_logistic_regression.html) we implemented a mult-class classifier that was capable of recognizing handwritten digits. However,
 logistic regression cannon form more complex hypotheses as it is only a linear classifier, unless more polynomial features are added, however that can 
 become too computationally intensive to train.
 
 In this exercise we will implement a neural network to recognize handwritten digits using the training set used in the previous exercise. The neural
 network will be able to recognize handwritten digits using the same training set as before and will be able to represent complex models that form
-non-linear hypotheses. In this exercise we will used parameters from a neural network that has already been trained. The goal is to use a feed forward
+non-linear hypotheses. In this exercise we will used parameters from a neural network that has already been trianed. The goal is to use a feedforward
 propagation algorithm to make predictions using the provided weights. In a separate exercise we will implement the backpropagation algorithm for learning 
 the network parameters.
 

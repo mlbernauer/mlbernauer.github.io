@@ -3,7 +3,7 @@ work of my own.
 
 # Learning objectives
 1. Identify a function or operation and describe it's use.
-2. Apply functions and operations to achieve a specific result.
+2. Apply functions and operations to acheive a specific result.
 3. Predict answers of calculations written in R.
 4. Use R's functions to get help and numerically summarize data.
 5. Apply ggplot() to organize and reveal patterns visually.
@@ -47,7 +47,7 @@ seq(1, 10)
 
 ### Assignment and variables
 Data type (i.e. sequences, integers, strings, data.frames) can all be assigned to variables using the `<-` operator. Variables
-created in this way are stored in memory and can be operated on and referenced by calling the variable name.
+created in this way are stored in memory and can be oparated on and referenced by calling the variable name.
 ```{r}
 # Assign a vector to variable a
 a <- 1:5
@@ -60,9 +60,9 @@ c <- a * b
 ```
 
 ### Basic functions
-The R-base package has many functions available for performing routine takes such as computing the mean of a vector, summing a vector
+The R-base package has many functions avaialbe for performing routine takes such as computing the mean of a vector, summing a vector
 as well as several other tasks. Help documentation for a particular function can be viewed by using putting a _?_ at the beginning
-of the function name, `?sum`, `?data sets`.
+of the function name, `?sum`, `?datasets`.
 ```{r}
 a
 sum(a)
@@ -77,9 +77,9 @@ range(a)
 ```
 
 ### Extracting subsets
-Lists, vectors, data frames and matrices can all be subseted using various techniques.
+Lists, vectors, data frames and matricies can all be subseted using various techniques.
 ```{r}
-# Create a vector ranging from 0 to 100 by 10
+# Create a vector raning from 0 to 100 by 10
 a <- seq(0, 100, by=10)
 
 # Index/subset the first element of the vector
@@ -169,7 +169,7 @@ a[!is.na(a)]
 # Plotting with ggplot2
 This section is intended as an introduction to `ggplot2` and some of its capabilities. As a basic introduction, it requires a `data.frame` object as input, and then you define plot layers that stack on top of each other, and each layer has visual/text elements that are mapped to aesthetics (colors, size, opacity). In this way, a simple set of commands can be combined to produce extremely informative displays.
 
-In the example that follows, we consider a data set `mpg` consisting of fuel economy data from 1999 and 2008 for 38 popular models of car.
+In the example that follows, we consider a dataset `mpg` consisting of fuel economy data from 1999 and 2008 for 38 popular models of car.
 
 ```{r}
 # Install ggplot2 if not already
@@ -178,7 +178,7 @@ if(!require(ggplot2)){install.packages("ggplot2")}
 # Load the ggplot2 package
 library(ggplot2)
 
-# The mpg data set should be already loaded into our R environment
+# The mpg dataset should be already loaded into our R environment
 # lets take a look at the top few rows of data using head()
 head(mpg)
 
@@ -193,13 +193,13 @@ ggplot(mpg) + geom_point(aes(x=displ, y=hwy)) + labs(title="Highway MPG vs Displ
   xlab("Engine displacement (liters)") + ylab("Highway MPG")
 ```
 
-The `ggplot()` function sets up the data frame to be used while the `geom_point()` function specifies the type of plot (i.e. geom) to use. The `aes()` function inside `geom_point()` is used to map plot attributes (i.e. $x$ and $y$ values) to columns within the data frame. We can map other values to plot attributes using `aes()` for example, we can map the color of each point to the class of vehicle.
+The `ggplot()` function sets up the data frame to be used while the `geom_point()` function specifies the type of plot (i.e. geome) to use. The `aes()` function inside `geom_point()` is used to map plot attributes (i.e. $x$ and $y$ values) to columns within the data frame. We can map other values to plot attributes using `aes()` for example, we can map the color of each point to the class of vehicle.
 
 ```{r}
 ggplot(mpg) + geom_point(aes(x=displ, y=hwy, color=class)) + labs(title="Highway MPG vs Displacement") +
   xlab("Engine displacement (liters)") + ylab("Highway MPG")
 ```
-We can go a step further and map the size of each point to the number of cylinders and the shape of each point to the drive type (i.e. number of gears). In this way, we can encode a large amount of information (dimensions) into each plot (although this is not always desirable).
+We can go a step further and map the size of each point to the number of cylinders and the shape of each point to the drive type (i.e. number of gears). In this way, we can encode a large amount of information (dimensions) into each plot (althought this is not always desireable).
 
 ```{r}
 ggplot(mpg) + geom_point(aes(x=displ, y=hwy, color=class, shape=drv, size=cyl)) +
@@ -257,13 +257,13 @@ changing transparency.
 ggplot(mpg) + geom_point(aes(x=reorder(class, hwy), y=hwy), position="jitter", alpha=0.5)
 ```
 
-Suppose were are more interested in comparing the distribution of highway MPG between vehicle classes. Box plots would be more appropriate
+Suppose were are more interested in comparing the distribution of highway MPG betwee vehicle classes. Boxplots would be more appropriate
 
 ```{r}
 ggplot(mpg) + geom_boxplot(aes(x=reorder(class, hwy), y=hwy))
 ```
 
-That's good, but we would like to see how the data points are distributed within the quartiles, lets add a `geom_point()` layer to show this
+That's good, but we would like to see how the data points are distributed within the quartiles, lets add a `goeom_point()` layer to show this
 
 ```{r}
 # Specify how much jitter you would like to add

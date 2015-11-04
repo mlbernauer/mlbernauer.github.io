@@ -6,8 +6,8 @@ it is functioning correctly.
 
 Suppose you are the product manager of the factory and you have the test
 results for some microchips on two different tests. From these two tests
-you would like to determine whether the microchips should be accepted or rejected.
-To help you make the decision, you have a data set of test results on past microchips,
+you would like to determine whether the micochips should be accepted or rejected.
+To help you make the decision, you have a dataset of test results on past microchips,
 from which you can build a logistic regression model.
 
 ## Visualizing the data
@@ -20,22 +20,22 @@ ggplot(chip_data) + geom_point(aes(x=V1, y=V2, colour=factor(V3))) + labs(title=
   ylab("Microchip Test 1") + xlab("Microchip Test 2")
 ```
 
-The above plot shows that our data set cannot be separated into positive and negative
+The above plot shows that our dataset cannot be separated into positive and negative
 examples by a straight-line through the plot. Therefore, a straightforward application of
-logistic regression will not perform well on this data set since logistic regression
+logistic regression will not perform well on this dataset since logistic regression
 will only be able to find a linear decision boundary.
 
 ## Feature mapping
-One way to fit the data better is to create more features from each data point. To achieve this
-we will map the features into all polynomial terms $x_{1}$ and $x_{2}$ up to the sixth power.
+One way to fit the data better is to create more features from each data point. To acheive this
+we will mapp the features into all polynomial terms $x_{1}$ and $x_{2}$ up to the sixth power.
 As a result of this mapping, our vector of two features (the scores on two QA tests) will be
 transformed into a 28-dimensional vector. A logistic regression classifier trained on this higher-dimension
 feature vector will have a more complex decision boundary and will appear non-linear when drawn in our 2-dimensional
 plot.
 
-While the feature mapping allows us to build a more expressive classifier, it is also more susceptible to over fitting.
+While the feature mapping allows us to build a more expressive classifier, it is also more susceptible to overfitting.
 In the next part of this exercise we will implement regularized logistic regression to fit the data and also to see
-how regularization can help combat the over fitting problem.
+how regularization can help combat the overfitting problem.
 
 ### Implementation
 ```{r}
@@ -98,7 +98,7 @@ cost_function(X, y, theta)
 ```
 
 ## Gradient descent
-We now need to construct an algorithm that allows us to minimized the cost function $J(\theta)$ with respect to parameters
+We now need to construct an algorithm tha allows us to minimzed the cost function $J(\theta)$ with respect to parameters
 $\theta$. As in previous examples, we will implement the gradient descent algorithm. However, because we are using regularized
 logistic regression, the gradient descent algorithm is constructed a little bit differently than the non-regularized version.
 
@@ -133,10 +133,10 @@ gradient_descent <- function(X, y, theta, lambda=1, iters=1e4, alpha=0.0001){
 ## Putting it all together
 To recap we explored that data visually and determined that a linear decision boundary would not
 adequately separate the data into positive and negative examples. Therefore we wrote a feature
-mapping function which takes our input matrix of test-results and returns a higher order features
+mapping function which takes our input matrix of test-results and retuns a higher order features
 space with polynomial features up to the 6<sup>th</sup> degree. We then implemented a regularized
 cost function for logistic regression as well as the familiar sigmoid function. We also implemented
-a regularized gradient descent algorithm. We are now ready to bring it all together to learn
+a regularized gradient descent algorithm. We are now ready to bring it all toghether to learn
 the parameters using the higher-ordered mapped feature matrix.
 
 ```{r}
@@ -153,7 +153,7 @@ fit <- gradient_descent(high_order_features, y, theta, lambda=1, alpha=0.0001, i
 qplot(1:iters, fit$cost_hist, geom="line", main="Cost function", ylab="Cost", xlab="Iterations")
 ```
 
-### Plotting the decision boundary
+### Plotting the decision boudnary
 ```{r}
 min_data <- apply(chip_data[,-3], 2, min)
 max_data <- apply(chip_data[,-3], 2, max)

@@ -4,9 +4,9 @@ This tutorial is adapted from the Treemapify [documentation](https://github.com/
 ## Dependencies and data
 The Treemapify package depends on `ggplot2`, `reshape2`, `plyr` and must be installed with `devtools`
 
-For any tree map, you need a data frame containing at least the following columns:
-* A numeric column, which will determine the area of each tree map rectangle.
-* Another numeric column, which will determine the fill color of each tree map rectangle.
+For any treemap, you need a data frame containing at least the following columns:
+* A numeric column, which will determine the area of each treemap rectangle.
+* Another numeric column, which will determine the fill color of each treemap rectangle.
 
 For this example we'll use a couple of optional columns
 * A factor column, containing labels for each rectangle (Country)
@@ -23,10 +23,10 @@ head(G20)
 ```
 
 ## Mapping the data to coordinates
-The `treemapify` function generates coordinates for a tree map in which each observation
+The `treemapify` function generates coordinates for a treemap in which each observation
 is represented as a rectangle. In this example, each observation is a country; the rectangle's
 area will be mapped to the country's nominal GDP, while the fill color will be mapped to the Human
-Development Index (HDI). We'll also group the countries by region.
+Development Index (HDI). We'll also group the contiries by region.
 
 ```{r}
 # Generate coordinates for the rectangles
@@ -35,7 +35,7 @@ head(treemap_coords)
 ggplotify(treemap_coords) + labs(title="G-20 GDP and HDI")
 ```
 
-In the example above, the fill color is mapped to HDI which is continuous, giving us a continuous color gradient. If we were to map the color to 
+In the example above, the fill color is mapped to HDI which is continous, giving us a continous color gradient. If we were to map the color to 
 another variable (discrete) we would get a discrete colormapping.
 
 ```{r}

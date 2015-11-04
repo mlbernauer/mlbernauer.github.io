@@ -10,7 +10,7 @@ head(hotdogs)
 ```
 
 ## Designing the plot using R-base graphics
-We are interested in showing the number of HDBs eaten over time. To achieve this, we will plot the number of HDBs eaten
+We are interested in showing the number of HDBs eaten over time. To acheive this, we will plot the number of HDBs eaten
 by the winner for each year.
 ```{r}
 colors <- ifelse(hotdogs$New.record == 1, "darkred", "grey")

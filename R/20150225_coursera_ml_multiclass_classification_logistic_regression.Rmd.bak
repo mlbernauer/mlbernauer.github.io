@@ -6,7 +6,7 @@ hand-written digits.
 We will use logistic regression and neural networks to recognize handwritten digits (from 0 to 9). Automated handwritten digit recognition is widely used today - from recognizing zip codes (postal codes) on mail envelopes to recognizing amounts written on bank checks. This exercise will walk you through these sorts of classification tasks.
 
 ### Dataset
-The Dataset `ex3data1_features.txt` contains 5000 training examples of handwritten digits. Each training example is a 20x20 pixel gray scale image of the digit. Each pixel is represented by a floating point number indicating the gray scale intensity at that location. The 20x20 grid of pixels is "unrolled" into a 400 dimensional vector. Each of these training examples becomes a single row in our data matrix $X$. This gives us a 5000x400 matrix $X$ where every row is a training example for a handwritten digit image.
+The dataset `ex3data1_features.txt` contains 5000 training examples of handwritten digits. Each training example is a 20x20 pixel grayscale image of the digit. Each pixel is represented by a floating point number indicating the grayscale intensity at that location. The 20x20 grid of pixels is "unrolled" into a 400 dimensional vector. Each of these training examples becomes a single row in our data matrix $X$. This gives us a 5000x400 matrix $X$ where every row is a training example for a handwritten digit image.
 
 The second part of the training set is a 5000x1 dimensional vector $y$ that contains labels for the
 training set. Class labels can be found in `ex3data1_labs.txt`.
@@ -38,7 +38,7 @@ image(canvas, col=gray(seq(1,0,length=100)))
 
 ### Vectorizing logistic regression with regularization
 We will be using multiple one-vs-all logistic regression models to build a multi-class classifier.
-Since there are 10 classes, we will need to train 10 separate logistic regression classifiers. To
+Since there rae 10 classes, we will need to train 10 separate logistic regression classifiers. To
 make this training efficient, it is important to ensure that the code is well vectorized. In this section, we will implement a vectorized version of logistic regression that does not employ any _for_ loops.
 
 Recall that the regularized cost function is
@@ -92,15 +92,15 @@ The expression above allows us to compute all the partial derivatives without an
 
 ## One-vs-all classification
 In this part of the exercise we will implement one-vs-all classification by training multiple regularized logistic regression
-classifiers, one fore each of the $k$ classes in our Dataset. In the handwritten digits data set, $k = 10$, but the code should
+classifiers, one fore each of the $k$ classes in our dataset. In the handwritten digets dataset, $k = 10$, but the code should
 work for any value of $k$.
 
 The code below will train one classifier for each class and returns all of the classifier parameters in a matrix $\Theta$ which is Kx(n+1). Where each row of $\Theta$ corresponds to the learned logistic regression parameters for one class. This can be done using a "for"-loop from 1 to $k$, training each classifier independently.
 
-When training the classifier for class $k \in {1,...,k}$, we need $m$-dimensional vector of labels $y$, where $y_{i} \in 0,1$ indicates whether the $j$-th training instance belongs to class $k (y_{j} = 1)$, or if it belongs to a different class $(y_{i} = 0)$.
+When training the classifer for class $k \in {1,...,k}$, we need $m$-dimensional vector of labels $y$, where $y_{i} \in 0,1$ indicates whether the $j$-th training instance belongs to class $k (y_{j} = 1)$, or if it belongs to a different class $(y_{i} = 0)$.
 
 Below is the code that trains a separate classifier for each class label, $k$. in the code below we train the model on the entire
-example data set, in practice this should be split into a training and test set with the training set comprising about 70% of the
+example dataset, in practice this should be split into a training and test set with the training set comprising about 70% of the
 observations and the test set comprising the other 30% of the observations.
 
 ```{r, eval=FALSE}
@@ -137,7 +137,7 @@ write.table(theta_matrix, file="theta.csv", row.names=FALSE, col.names=FALSE, se
 ### One-vs-all prediction
 After training the one-vs-all classifier, we can now use it to predict the digit contained in a given image. For each input, you should
 compute the "probability" that it belongs to each class using the trained logistic regression classifiers. The one-vs-all prediction
-function (implemented below) will pick the class for which the corresponding logistic regression classifier outputs the highest probability
+function (implemented below) will pick the class for which the corresponding logistic regression classifer outputs the highest probability
 and return the class label (1,2,..., or k) as the prediction for the input example.
 
 
@@ -176,7 +176,7 @@ $$Accuracy = \frac{n_{correct}}{N_{test}}$$
 
 from the results above we can see that the accuracy of our model is `r accuracy * 100` which is not bad, considering our
 gradient descent algorithm did not converge completely. We can observe convergence by plotting our cost history returned
-by gradient descent.
+by gradient descnet.
 ```{r}
 require(reshape2)
 require(ggplot2)
@@ -191,4 +191,4 @@ ggplot(cost_hist_long, aes(x=V0, y=value, color=variable)) + geom_line() +
   labs(title="Model Cost Function Convergence") + ylab("Cost") + xlab("Iteration")
 ```
 
-The above plot shows the convergence of each model as parameters are adjusted by gradient descent to minimize the cost function $J(\theta)$ we can see that if the algorithm were allowed to run longer, the algorithm would eventually converge to a minimum. Although it appears we are close to the minimum we are not quite there. As a result our model is not as accurate as it could be with an overall accuracy rate of `r accuracy*100`% correct classification rate.
+The above plot shows the convergence of each model as parameters are adjusted by gradient descent to minimze the cost function $J(\theta)$ we can see that if the algorithm were allowed to run longer, the algorithm would eventually converge to a minumum. Although it appears we are close to the minimum we are not quite there. As a result our model is not as accurate as it could be with an overall accuracy rate of `r accuracy*100`% correct classification rate.

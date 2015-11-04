@@ -8,14 +8,14 @@ output: html_document
 =======
 >>>>>>> 2fd18c7bca93e5d5e9aaec3c4b492d406af0a5b4
 ## Introduction
-You are interested in comparing the cost and outcomes over a 20 year time period of preventative
+You are interested in comparing the cost and outcomes over a 20 year time peroid of preventative
 strategies for postmenopausal women with osteoporosis. You plan to compare two options; Treatment A 10mg/day, and Treatment B 70mg once a week.
 
 The main outcomes measured are incidence of bone fracture and the effect on LYs and QALYs. It is
 estimated that about 5% of the patients taking Treatment A will have a fracture and 5% of those
 taking Treatment B will experience a fracture. The cost of treating a fracture is $3,000 and a 
 fracture will decrease life-years by 5. The utility reduction associated with having a fracture
-is 0.5. Treatment A causes GI complications in 5% of the patients, and Treatment B causes GI complications in 2% of the patients. The cost of treating GI complications is $200, and LYs are decreased by 1. The utility reduction associated with GI complications is 0.2.
+is 0.5. Treatment A causes GI complications in 5% of the patients, and Treatment B causes GI complications in 2% of the patients. The cost of treating GI complications is $200, and LYs are decreased by 1. The utility reduction associated with GI complicaations is 0.2.
 
 | | Treatment A | Treatment B
 --- | --- | ---
@@ -78,8 +78,8 @@ costB <- compute_cost(drug_cost, bone_cost, bone_prob, gi_cost, gi_prob)
 costB
 ```
 
-### Determining life year reductions
-This same method can be used to determine the life-years associated with a particular treatment by using the life year reductions for each event instead of costs. For example, bone fracture takes away 5 life years, GI upset takes away only 1 life year. We can recycle the `compute_cost()` function above by replacing the cost in dollars with associated life year reductions. This will give us the average life year reduction for each of the treatments.
+### Determining lifeyear reductions
+This same method can be used to determine the lifeyears associated with a particular treatment by using the lifeyear reductions for each event instead of costs. For example, bone fracture takes away 5 life years, GI upset takes away only 1 life year. We can recycle the `compute_cost()` function above by replacing the cost in dollars with associated life year reductions. This will give us the average lifeyear reduction for each of the treatments.
 
 ```{r}
 # Compute LY reductions for Treatment A
@@ -118,11 +118,11 @@ ly_B
 ```
 
 ### Computing average utility for each treatment
-Now that we've computed that average LY give per treatment we can apply the same process to compute the average
-util for each treatment. Once we compute the average utility we can calculate the Quality Adjusted Life Years for
+Now that we've computed that average LY give per treatment we can apply the same process to compute the avereage
+utily for each treatment. Once we compute the average utily we can calculate the Quality Adjusted Life Years for
 each treatment and use this as a means of comparing the quality of life the patient can expect to experience while on the particular treatment.
 
-We apply the same `compute_cost()` function as we did in the previous examples however, in this case we are looking at the utility reduction associated with each event. The reduction in utility associated with GI irritation is 0.2 and the reduction in utility associated with bone fracture is 0.5, there is not reduction in utility associated with actually taking the medication.
+We apply the same `compute_cost()` function as we did in the previous examples however, in this case we are looking at the utility reduction associated with each event. The reduction in utility associated with GI irritation is 0.2 and the reduction in utility associated with bone fracture is 0.5, there is not reduction in utility associatd with actually taking the medication.
 
 ```{r}
 # Compute the average reduction in utility for Treatment A
@@ -162,7 +162,7 @@ utility_B
 
 ### Computing Quality Adjusted Life Years (QALYs)
 Now that we have the average utility associated with each of the treatments, we can compute the QALY for
-each treatment. This is done by multiplying the expected LYs of each treatment with the average utility
+each treatment. This is done by multiplyting the expected LYs of each treatment with the average utility
 associated with each treatment (calculated above).
 
 ```{r}
@@ -178,7 +178,7 @@ QALY_B
 Now we are ready to compute incremental costs per LY gained and incremental cost per QALY gained for each treatment.
 
 ### Computing incremental cost per LY gained
-We compute the incremental cost per LY gained according to the formulate below
+We compute the incremental cost per LY gained according to the formulat below
 $$ ICER = \frac{Cost_B - Cost_A}{Lifeyear_B - Lifeyear_A}$$
 
 ```{r}
@@ -203,9 +203,9 @@ Cost/LY | --- | `r format(round(ICER,2), nsmall=2)`
 Cost/QALY | --- | `r format(round(ICUR,2), nsmall=2)`
 
 ## Sensitivity analysis
-We are now interested in seeing how the costs and benefits associated with each treatment change with respect to small changes in parameter estimates. The variation in the parameters comes from the uncertainty associated with trying to measure them. For example, utility values associated with certain events are often determined using surveys or a variety of different methods which may give slightly different results Additionally, the probabilities of experiencing certain side effects may have some uncertainly in the as well. The goal of sensitivity analysis is to determine how the uncertainties alter our finally decision.
+We are now interested in seeing how the costs and benefits associated with each treatment change with respect to small changes in parameter estimates. The variation in the parameters comes from the uncertainty associated with trying to measure them. For example, utility values associated with certain events are often determined using surveys or a variety of different methods which may give slightly different results Additionally, the probabilities of experiencing certain side effects may have some uncertaintly in the as well. The goal of sensitivity analysis is to determin how the uncertainties alter our finaly decision.
 
-For this part of the exercises lets create another function to run our simulation. The function should manipulate each of the inputs and return the cost. In this example we will simply vary each variable by a percentage of its original value. In practice, you would want to specify the low and high ranges based on values from the literature.
+For this part of the excercise lets create another function to run our simulation. The function should manipulate each of the inputs and return the cost. In this example we will simply vary each variable by a percentage of its original value. In practice, you would want to specify the low and high ranges based on values from the literature.
 
 ```{r}
 sensitivity <- function(c, c1, p1, c2, p2, var=0.2, n=1e4){
@@ -240,7 +240,7 @@ ggplot(data=cost_dist, aes(x=cost, fill=treatment)) +
   labs(title="Simulated cost distribution")
 ```
 
-Now we can do the same for the expected life years for each treatment
+Now we can do the same for the expected lifeyears for each treatment
 
 ```{r}
 n <- 1e3
@@ -252,7 +252,7 @@ ggplot(data=ly_red_dist, aes(x=Lifeyears, fill=Treatment)) + geom_histogram(alph
   labs(title="Simulated lifeyear distributions")
 ```
 
-Now we can use the simulated data and plot the cost versus benefit (life years)
+Now we can use the simulated data and plot the cost versus benefit (lifeyears)
 
 ```{r}
 # Plot distributions with 95% confidence ellipse
@@ -278,7 +278,7 @@ ggplot(data=sens_analysis, aes(x=QALY, y=Cost, colour=Treatment)) +
   labs(title="Cost vs QALY")
 ```
 
-Now lets plot the incremental cost again the incremental benefits
+Now lets plot the incremental cost agains the incremental benefits
 
 ```{r}
 incremental_costs <- costB - costA
@@ -294,8 +294,8 @@ ggplot(data=ICER, aes(Lifeyears, Cost)) +
   labs(title="Incremental Cost vs Lifeyears")
 ```
 
-In the plot above, we see that the incremental cost associated with Treatment B has a mean of about $50 with an incremental life years of about 0.03 years. Also note that the 95% confidence ellipse extends beyond the cost and
-Lifeyear axes.
+In the plot above, we see that the incremental cost associated with Treatment B has a mean of about $50 with an incremental lifeyears of about 0.03 years. Also note that the 95% confidence ellipse extends beyond the cost and
+lifeyear axes.
 
 We can perform the same procedure using incremental Cost and QALYs.
 

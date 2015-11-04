@@ -1,10 +1,10 @@
 # Neural Networks Learning
-In this exercise we will implement the back propagation algorithm for neural networks and apply it to the task of handwritten
+In this exercise we will implement the backpropagation algorithm for neural networks and apply it to the taks of handwritten
 digit recognition.
 
 ## Neural Networks
-In the previous exercise we implemented feed forward propagation to predict handwritten digits using previously learned
-weight parameters for each layer in the network. In this exercise, we'll implement the back propagation algorithm
+In the previous exercise we implemented feedforward propagation to predict handwritten digits using previously learned
+weight parameters for each layer in the network. In this exercise, we'll implement the backpropagation algorithm
 to generate weights for our model.
 
 ## Visualizing the data
@@ -26,10 +26,10 @@ image(canvas, col=grey(seq(1,0,length=100)))
 ```
 
 ## Model representation
-We went over the network structure while implementing the feed forward algorithm in the previous post ![](http://mlbernauer.bitbucket.org/R/20150228_coursera_ml_neural_networks.html). The network is composed of three lawyers; the input layer, single hidden layer and an output layer. The input layer consists of 401 (400 features + 1 bias) nodes, the hidden layer consists of 26 nodes (25 features + 1 bias) and the output layer consists if 10 output nodes corresponding to the class labels of the 10 digits our network should be able to recognize.
+We went over the network structure while implementing the feedforward algorithm in the previous post ![](http://mlbernauer.bitbucket.org/R/20150228_coursera_ml_neural_networks.html). The network is composed of three laywers; the input layer, single hidden layer and an output layer. The input layer consists of 401 (400 features + 1 bias) nodes, the hidden layer consists of 26 nodes (25 features + 1 bias) and the output layer consists if 10 output nodes corresponding to the class labels of the 10 digits our network should be able to recognize.
 
-## Feed forward and cost function
-The cost function for this particular neural network is almost identical to that of logistic regression
+## Feedforward and cost function
+The cost funciton for this particular neural network is almost identical to that of logistic regression
 
 $$J(\theta) = \frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[-y_{k}^{(i)}log(h_{\theta}(x^{(i)})_{k}) - (1 - y_{k}^{(i)})log(1-(h_{\theta}(x^{(i)}))_{k})]$$
 where $h_{\theta}(x^{(i)})$ is computed from the weighted sum of inputs for each node mapped through the sigmoid function. and $K = 10$ which is the number
@@ -37,7 +37,7 @@ of class labels.
 
 Similar to the one-vs-all implementation of logistic regression we need to recode the labels, $y$, to a K dimensional vector where $y \in (0,1)$
 
-The feed forward algorithm computes $h_{\theta}(x^{(i)})$ for every example $i$ and sums over all examples
+The feedforward algorithm computes $h_{\theta}(x^{(i)})$ for every example $i$ and summs over all examples
 
 ## Implementation
 ```{r}
@@ -86,7 +86,7 @@ We see that the cost computed from our implemented cost function is `r cost` whi
 
 
 ## Regularized cost function
-Now we should implement regularization to prevent over fitting
+Now we should implement regularization to prevent overfitting
 
 $$J(\theta) = \frac{1}{m}\sum_{i=1}^{m}\sum_{k=1}^{K}[-y_{k}^{(i)}log(h_{\theta}(x^{(i)})_{k}) - (1 - y_{k}^{(i)})log(1-(h_{\theta}(x^{(i)}))_{k})] + 
 \frac{\lambda}{2m}[\sum_{j=1}^{25}\sum_{k=1}^{400}(\Theta_{j,k}^{(1)} + \sum_{j=1}^{10}\sum_{k=1}^{25}(\Theta_{j,k}^{(2)}]$$
@@ -102,7 +102,7 @@ nn_regularized_cost_function <- function(X, y, theta1, theta2, lambda=1){
   return(J)
 }
 ```
-If the `nn_regularized_cost_function` has been implemented correctly we should see a cost of about 0.383770.
+If the `nn_regularized_cost_function` has been implemented correcly we should see a cost of about 0.383770.
 Let's test it
 
 ```{r}
@@ -111,12 +111,12 @@ reg_cost <- nn_regularized_cost_function(train_mat, labels, theta1, theta2, lamb
 reg_cost
 ```
 
-From the output above we can see our cost, using the previously learned parameters, is `r reg_cost` which is really close to the 
-expected 0.383770. This lets us know that we have a working cost function. We are now ready to implement the back propagation algorithm
+From the output obove we can see our cost, using the previously learned parameters, is `r reg_cost` which is really close to the 
+expected 0.383770. This lets us know that we have a working cost function. We are now ready to implement the backpropagation algorithm
 in order to learn our own parameters for the network.
 
 ## Sigmoid gradient
-The back propagation algorithm depends on the sigmoid gradient. We must write a function to calculate the gradient
+The backpropagation algorithm depends on the sigmoid gradient. We must write a function to calculate the gradient
 of the sigmoid function with respect to $z$
 $$g'(z) = \frac{d}{dz}g(z) = g(z)(1-g(z))$$
 when z = 0 the gradient should be exactly 0.25 and close to zero for large (both positive and negative) values of $z$.
@@ -130,21 +130,21 @@ sigmoid_gradient_function(-100)
 sigmoid_gradient_function(100)
 ```
 From the output above we can determine that the gradient function has been implemented correctly.
-## Back propagation
-The intuition behind back propagation is as follows. Give an training example ($x^{t}, y^{t}$), we will run a forward pass to compute
+## Backpropagation
+The intuition behind backpropagation is as follows. Give an training example ($x^{t}, y^{t}$), we will run a forward pass to compute
 all the activations throughout the network, including the output value of the hypothesis function $h_{\theta}(x)$. Then for each node $j$
 in layer $l$, we will compute an "error term" $\delta_{j}^{(i)}$ that measures how much that node was "responsible" for any errors in the output.
-For an output node we can directly measure the difference between the network's activation and the true target value, and use that to define $\delta_{j}^{(3)}$ 
+For an output node we can directly measure the difference between the network's activiation and the true target value, and use that to define $\delta_{j}^{(3)}$ 
 (since layer 3 is the output layer). For the hidden units, we compute $\delta_{j}^{(l)}$ based on a weighted average of the error terms of the nodes in layer $(l+1)$.
 
-The back propagation algorithm will implement steps 1-4 in a _for_ loop for $i = 1:m$k, performing each calculation on the $t^{th}$ training example. The last step
+The backpropagation algorithm will implement steps 1-4 in a _for_ loop for $i = 1:m$k, performing each calculation on the $t^{th}$ training example. The last step
 divides the accumulated gradients by $m$ to obtain the gradients for the neural network cost function.
 
-1. Set the input layer's values ($a^{t}$) to the $t$-th training example $x^{(t)}$. Perform a feed forward pass.
+1. Set the input layer's values ($a^{t}$) to the $t$-th training example $x^{(t)}$. Performa a feedforward pass.
 2. For each output in unit $k$ in the output layer, set $$\delta_{k}^{(3)} = (a_{k}^{(3)} - y_{k})$$
 where $y_{k} \in (0,1)$
 3. For the hidden layer $l=2$, set $$\delta^{(2)} = (\Theta^{(2)})^{T}\delta^{(3)}.*g'(z^{(2)})$$
-4. Accumulate the gradient from this example using the following formulate. Note that you should skip or remove $\delta_{0}^{(2)}$. 
+4. Accumulate the gradient from this example using the following formulat. Note that you should skip or remove $\delta_{0}^{(2)}$. 
 $$\Delta^{(l)} = \Delta^{(l)} + \delta^{(l+1)}(a^{(l)})^{T}$$
 
 5. obtain the (unregularized) gradient for the neural network cost function by dividing the accumulated gradients by $\frac{1}{m}$

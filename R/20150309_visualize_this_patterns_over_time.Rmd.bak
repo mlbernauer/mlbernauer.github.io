@@ -16,13 +16,13 @@ p <- ggplot(df, aes(x=1:dim(df)[1], y=Value)) + geom_jitter(alpha=0.25, size=3) 
 p + stat_smooth(method="loess", size=1, se=FALSE, span=0.7)
 ```
 
-The figure above is produced using a span of 0.5, if we wish to generate a more tightly fit trend line we can use a smaller span.
+The figure above is produced using a span of 0.5, if we wish to generate a more tightly fit trendline we can use a smaller span.
 
 ```{r}
 p + stat_smooth(method="loess", size=1, se=FALSE, span=0.2)
 ```
 
-Or if we wish to make a more robust trend line we can increase the span.
+Or if we wish to make a more robust trendline we can increase the span.
 
 ```{r}
 p + stat_smooth(method="loess", size=1, se=FALSE, span=0.9)

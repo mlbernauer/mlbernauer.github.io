@@ -85,7 +85,7 @@ gradient_descent <- function(X, y, theta, iters=1e4, alpha=0.0001){
   return(list(cost_hist=J, params=theta))
 }
 ```
-Now lets test the optimization using gradient descent. For this data set, if the cost function converges completely you should
+Now lets test the optimization using gradient descent. For this dataset, if the cost function converges completely you should
 see a total cost of about 0.203.
 ```{r}
 fit <- gradient_descent(X, y, theta, alpha=0.001, iters=1e6)
@@ -93,7 +93,7 @@ qplot(1:length(fit$cost_hist), fit$cost_hist, geom="line", main="Cost function",
 ```
 
 From the plot above, we see that the function does not converge completely, however we do see that there appears to be
-a lower limit somewhere around 0.2 as expected. Our learned parameters that minimize the cost function are returned in the
+a lower limit somewhere around 0.2 as expected. Our learned parameters that minimze the cost function are returned in the
 `fit` object and are found to be `r fit$params`.
 
 ### Plot decision boundary
@@ -121,7 +121,7 @@ p <- ggplot(decision_boundary) + geom_point(aes(x=x, y=y,colour=factor(admission
 p
 ```
 
-We can see that decision boundary appropriately separates the admitted students from the non-admitted students.
+We can see that decision boundary appropriately separates the admitted students from the non-admittted students.
 
 ### Logistic regression using R-base
 There are build in ways for learning logistic regression parameters. The `glm` function allows

@@ -1,5 +1,5 @@
 ## Libraries
-Libraries, or R-packages are loaded into the R environment using `library()` or `require()`
+Librarires, or R-packages are loaded into the R environmen using `library()` or `require()`
 
 ```{r}
 require(ISLR)
@@ -9,17 +9,17 @@ require(ggplot2)
 ```
 
 ## Simple linear regression
-In this example we will explore th `Boston` data set contained within the `MASS` package. We will seek to predict
+In this example we will explor th `Boston` dataset contained within the `MASS` package. We will seek to predict
 the _medv_ (median house value, in $1000) using _rm_ (average house room number), `age` (average age of houses in neighborhood)
 and `lstat` (percentage of households with low socioeconomic status).
 
 ```{r}
-# First lets explore that Boston data set
+# First lets explore that Boston dataset
 dim(Boston)
 names(Boston)
 #summary(Boston)
 
-# Plot scatterplot matrix to explore relationships/correlations
+# Plot scatterplo matrix to explore relationships/correlations
 ggpairs(Boston[,c("medv", "age", "rm", "lstat")], alpha=0.1)
 ```
 
@@ -70,7 +70,7 @@ ggplot(Boston, aes(x=lstat, y=medv)) +
 
 From the summary output we can see that both parameter estimates are significant, that is both the intercept
 and the slope have P-values < 0.05. Additionally, the slope parameter is greater than 0 and the confidence intervals
-for the slope parameter do not cross 0, suggesting a significant relationship between `rm` and `medv`. In fact, the slope
+for the slope paramter do not cross 0, suggesting a significant relationship between `rm` and `medv`. In fact, the slope
 is 9.102 which suggests that each additional room changes the median value of the house by $9,102.
 
 ## Checking assumptions
@@ -83,22 +83,22 @@ par(mfrow=c(2,2))
 plot(fit)
 ```
 
-On the basis of the residuals there appears to be some non-linearity in our data. Additionally, residuals and studentized residuals
+On the basis of the residuals there appears to be some non-linearity in our data. Additinally, residuals and studentized residuals
 can be plotted using `studres(fit)` and `residuals(fit)` respectively. Leverage statistics can be computed using `hatvalues(fit)`.
 
 
-## Making predictions 
+## Making predicitons 
 Once we have a working model we can make predictions using the `predict()` method. In this example we will predict
-the median value of houses in a neighbourhood given average room sizes of houses in that neighborhood.
+the median value of houses in a neighborhodo given average room sizes of houses in that neighborhood.
 
 ```{r}
-# Create a data frame containing houses with various room sizes
+# Create a dataframe containing houses with various room sizes
 new_data <- data.frame(lstat=c(8, 9, 10, 15, 20, 30))
 
 # Return predictions with confidence intervals 
 predict(fit, new_data, interval="confidence")
 
-# Return predictions with prediction intervals
+# Return predictions with prediciton intervals
 predict(fit, new_data, interval="prediction")
 ```
 
@@ -106,7 +106,7 @@ You can see that the predicted `medv` appears to increase by about $9,102 for ev
 
 ## Multiple linear regression
 In the above example we created a model to predict `medv` using only a single variable, `rm` however we can build
-more complex models by including more regressors. For example, we could include `age`, `lstat` as well as `rm`
+more complex models by including more regressiors. For example, we could include `age`, `lstat` as well as `rm`
 into our model. We could the determine which variables significantly influence (i.e. predict) `medv`.
 
 ```{r}
@@ -114,7 +114,7 @@ fit <- lm(medv ~ lstat + age, data=Boston)
 summary(fit)
 ```
 
-We can create a model with all 13 variables in `Boston` data set
+We can create a model with all 13 variables in `Boston` dataset
 
 ```{r}
 # We can use . to tell the lm function to use all variables
@@ -161,7 +161,7 @@ summary(fit2)
 ## Non-linear transformations on variables
 We've seen that there seems to be a non-linear relationship between
 `medv` and `lstat` we can fit a non-linear model to this by performing
-some sort of transformation on the variables.
+some sort of tranformation on the variables.
 
 ```{r}
 quad_fit <- lm(medv ~ lstat + I(lstat^2), data=Boston)
@@ -194,7 +194,7 @@ summary(fit)
 ```
 
 ## Qualitative predictors
-Qualitative variables can be used in regression models too, to see how R encodes these variables
+Qualtative variables can be used in regression models too, to see how R encodes these variables
 we can use the `contrasts()` function
 
 ```{r}
@@ -203,7 +203,7 @@ head(Carseats)
 contrasts(Carseats$ShelveLoc)
 ```
 
-Now lets try to predict car seat sales, `Sales` using the features of `Carseats`. We will include
+Now lets try to predict carseat sales, `Sales` using the features of `Carseats`. We will include
 interaction terms for `Income` and `Advertising` as well as `Price` and `Age`
 
 ```{r}
