@@ -166,7 +166,7 @@ margin: auto;
 
 
 a {
-  color: #121f1f;
+  color: #42affa;
   text-decoration: none;
 }
 
@@ -174,9 +174,7 @@ a:hover {
     color: #444;
 }
 
-a:link {
-    color: #42affa;
-}
+
 
 p {
   color: #444;
