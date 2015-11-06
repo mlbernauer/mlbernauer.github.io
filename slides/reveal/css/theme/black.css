@@ -5,14 +5,14 @@
  */
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #12191f; }
+  color: #1B262F; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #12191f;
-  background-color: #12191f; }
+  background: #1B262F;
+  background-color: #1B262F; }
 
 .reveal {
   font-family: "HelveticaNeue-Light", "Source Sans Pro", Helvetica, sans-serif;
