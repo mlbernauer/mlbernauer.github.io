@@ -90,7 +90,7 @@ box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 
 #header .nav {
-  background: #fff;
+  background: #F0F1EB;
   width: 100%;
   padding: 10px;
   text-align: center;
@@ -134,7 +134,8 @@ margin: 22px 40px 0 0px;
 }
 
 #home {
-background: scroll center bottom #1B262F;
+/*background: scroll center bottom #1B262F;*/
+background: scroll center bottom #F0F1EB;
 height: 500px;
 padding-top: 325px;
 width: 100%;
