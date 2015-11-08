@@ -38,9 +38,10 @@ p {
 
 h2 {
     font-size: 30px;
-  font-family: 'Cambo', serif;
+    font-family: 'Cambo', serif;
     margin-bottom: 10px;
     color: #1B262F;
+    opacity: 0.5;
 }
 
 h3 {
@@ -67,7 +68,7 @@ h1
  font-size: 55px;
  letter-spacing: 1px;
  text-align: center;
- color: #1B262F;
+ color: #fff;
 }
 
 /* NAVIGATION */
