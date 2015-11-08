@@ -12,6 +12,7 @@ body {
   text-align: left;
   margin:0;
   padding:0;
+  background: #F0F1EB;
 }
 
 a {
@@ -134,8 +135,7 @@ margin: 22px 40px 0 0px;
 }
 
 #home {
-/*background: scroll center bottom #1B262F;*/
-background: scroll center bottom #F0F1EB;
+background: scroll center bottom #1B262F;
 height: 500px;
 padding-top: 325px;
 width: 100%;
