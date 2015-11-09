@@ -5,14 +5,14 @@
  */
 @import url(../../lib/font/source-sans-pro/source-sans-pro.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #12191f; }
+  color: #1B262F; }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #12191f;
-  background-color: #12191f; }
+  background: #1B262F;
+  background-color: #1B262F; }
 
 .reveal {
   font-family: "HelveticaNeue-Light", "Source Sans Pro", Helvetica, sans-serif;
@@ -56,7 +56,9 @@ body {
 .reveal h2 {
   font-size: 1.6em; }
 
-.reveal h3 {
+.reveal h3{
+  margin: 1em 0 0 0;
+  text-align: left;
   font-size: 1.3em; }
 
 .reveal h4 {
@@ -91,7 +93,7 @@ body {
 .reveal ul {
   display: inline-block;
   text-align: left;
-  margin: 0 0 0 1em; }
+  margin: 0 0 0 2.5em;}
 
 .reveal ol {
   list-style-type: decimal; }

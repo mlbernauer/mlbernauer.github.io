@@ -6,8 +6,8 @@ Dark blue: 12191f
 */
 
 body {
-  font-family: Helvetica,sans-serif;
-  font-size:13px;
+  font-family: 'Helvetica', 'Open Sans', Helvetica,sans-serif;
+  font-size:15px;
   line-height: 1.6;
   text-align: left;
   margin:0;
@@ -38,9 +38,10 @@ p {
 
 h2 {
     font-size: 30px;
-  font-family: 'Cambo', serif;
+    font-family: 'Cambo', serif;
     margin-bottom: 10px;
-    color: #12191f;
+    color: #1B262F;
+    opacity: 0.7;
 }
 
 h3 {
@@ -133,7 +134,7 @@ margin: 22px 40px 0 0px;
 }
 
 #home {
-background: scroll center bottom #12191f;
+background: scroll center bottom #1B262F;
 height: 500px;
 padding-top: 325px;
 width: 100%;
@@ -268,7 +269,7 @@ a.githubicon:hover {
   }
 
 #footer {
-  background: #12191f;
+  background: #1B262F;
   height: 70px;
   margin: 0px auto;
 }

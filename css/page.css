@@ -1,6 +1,7 @@
 
 body {
-  font-family: "Helvetica",sans-serif;
+/*  font-family: "Helvetica",sans-serif;*/
+  font-family: 'Helvetica', 'Open Sans', sans-serif;
   font-size:15px;
   text-align: left;
   margin:30px 0px 0px;
@@ -10,8 +11,9 @@ body {
 }
 
 .container {
-font-family: Georgia, serif;
-font-size: 16px;
+/*font-family: Georgia, serif;*/
+font-family: 'Helvetica', 'Open Sans', sans-serif;
+font-size: 15px;
 line-height: 1.6;
 text-align: left;
 line-height: 1.6em;
@@ -28,7 +30,8 @@ line-height: 1.6em;
 .img_credit {
 font-size: 11px;
 text-transform: uppercase;
-font-family: Helvetica, sans-serif;
+/*font-family: Helvetica, sans-serif;*/
+font-family: 'Helvetica', 'Open Sans', sans-serif;
 font-weight: bold;
 margin-top: 40px;
 letter-spacing: .02em;
@@ -68,7 +71,8 @@ blockquote h1 {
 .content blockquote {
   padding: 30px;
 font-style: italic;
-font-family: Georgia, serif;
+/*font-family: Georgia, serif;*/
+font-family: 'Helvetica', 'Open Sans', sans-serif;
 background: #f7f7f7;
 }
 .content h1 {
@@ -100,7 +104,8 @@ left: 0px;
   font-size: 11px;
 font-weight: 400;
 text-transform: uppercase;
-font-family: "Helvetica",sans-serif;
+/*font-family: "Helvetica",sans-serif;*/
+font-family: 'Helvetica', 'Open Sans', sans-serif;
 letter-spacing: 1px;
 }
 
@@ -121,7 +126,8 @@ letter-spacing: 1px;
   display: inline-block;
   width: 100%;
   margin-top: 20px;
-  font-family: Helvetica, sans-serif
+  /*font-family: Helvetica, sans-serif*/
+  font-family: 'Helvetica', 'Open Sans', sans-serif;
 }
 
 .post.shorts {
@@ -189,24 +195,30 @@ p {
 .about {
   font-size: 15px;
   line-height: 2;
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, sans-serif;
+  /*font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, sans-serif;*/
+  font-family: 'Helvetica', 'Open Sans', sans-serif;
 
 }
 
 h2 {
     font-size: 30px;
-    font-family: 'Cambo', serif;
+    /*font-family: 'Cambo', serif;*/
+    font-family: 'Verdena', 'Open Sans', sans-serif;
     margin-bottom: 10px;
-    color: #121f1f;
     margin-top: 10px;
+    color: #444;
+    line-height: 1.4;
+    font-weight: 400;
 }
 
 h3 {
-  font-family: 'Cambo', serif;
+/*  font-family: 'Cambo', serif;*/
+  font-family: 'Helvetica', 'Open Sans', sans-serif;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1.4;
   margin-bottom: 10px;
   margin-top: 10px;
+  margin-left: 20px;
   color: #444;
 }
 
@@ -249,7 +261,8 @@ background: #F5F5F5
 
 h1
  {
- font-family: 'Cambo', serif;
+/* font-family: 'Cambo', serif;*/
+ font-family: 'Helvetica', 'Open Sans', sans-serif;
  margin-top: 10px;
  font-size: 55px;
  letter-spacing: 1px;
@@ -326,7 +339,7 @@ float: left;
 
 ul {
     list-style-type: circle;
-    margin-left: 30px;
+    margin-left: 45px;
 }
 
 #header .nav ul {

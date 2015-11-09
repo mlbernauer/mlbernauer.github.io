@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael L. Bernauer</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/portrait_crop.png"/>
+  <link type="text/css" rel="stylesheet" media="all" href="/css/reset.css"/>
+  <link type="text/css" rel="stylesheet" media="all" href="/css/page.css"/>
+  <script type="text/javascript" src="/js/smoothscroll.js">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+
+  <!-- Used to display interactive particle banner -->
+  <!--
+  <script language="javascript" src="/js/p5.js"></script>
+  <script src="/banner/sketch.js"></script>
+  -->
+</head>
+
+
+<body>
+
+<div id="header">
+  <div class="transparent">
+    <div class="nav">
+      <ul>
+        <li><a href="http://mlbernauer.github.io/#home">Michael L. Bernauer</a></li>
+        <li><a href="http://mlbernauer.github.io/#about">About</a></li>
+        <li><a href="http://mlbernauer.github.io/#projects">Projects</a></li>
+        <li><a href="http://mlbernauer.github.io/assets/2015_bernauer_curriculum_vitae.pdf">Curriculum Vitae</a></li>
+        <li><a href="/pages/downloads">Downloads</a></li>
+        <li><a href="/pages/slides">Slides</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="content">
+    <h1></h1>
+    <div class="deets">
+      <span class="date"></span>
+    </div>
+    
+    ## Education
+
+### University of New Mexico
+* UNM COP Deans List - 02/19/2014 [PDF](/assets/2013_deans_list.pdf)
+
+
+### Coursera
+* Machine Learning, Dr. Andrew Ng, Standford University - 09/30/2014 [PDF](/assets/2014_coursera_machine_learning_cert.pdf)
+* Curanderismo: Traditional Medicine, Dr. Elieo Torres, University of New Mexico - 11/26/2014 [PDF](/assets/2014_coursera_traditional_medicine_cert.pdf)
+* Reproducible Research, Dr. Roger Peng, Johns Hopkins Bloomberg School of Public Heath (with distinction) - 02/11/2015 [PDF](/assets/2015_coursera_reproducible_research.pdf)
+* Developing Data Products, Dr. Brian Caffo, Johns Hopkins School of Public Health (with distinction) - 02/11/2015 [PDF](/assets/2015_coursera_developing_data_products.pdf)
+
+## Research/Posters
+* Application of Supervised Machine Learning Algorithms for Rapid Identification of MRSA PFGE Strain Types - Project accepted and awarded travel grant for presentation at ICAAC/ICC annual meeting,
+    San Diego, CA, September 2015 [PDF](/assets/2015-ICAAC-Michael-Bernauer.pdf)
+* Analysis of Anderson Cascade Impactor Performance with Modified 3D Printed Induction Port - Plan to submit to American Association of Pharmaceutical Scientists (AAPS) annual meeting, Denver,
+    CO, 2016 [PDF](/assets/2015-germany.pdf)
+* Development of Intelligent Pharmaceutical Packaging for Real-Time Monitoring of Patient Compliance - Presented at American Association of Pharmaceutical Scientists (AAPS) annual meeting, San Diego, CA,
+    2014 [PDF](/assets/2014-aaps-wireless-monitor.pdf)
+
+## Presentations
+* American Association of Pharmaceutical Scientists (AAPS) Certificate of Attendance - 11/02/2014 [PDF](/assets/2014_AAPS_cert_of_attendance.pdf)
+* American Association of Pharmaceutical Scientists (AAPS) Certificate of Presentation - 11/02/2014 [PDF](/assets/2014_AAPS_cert_of_presentation.pdf)
+
+## Publications
+
+### Abstracts
+* Application of Supervised Learning Algorithms for Rapid Identification of MRSA PFGE Strain Types, _ICAAC/ICC Annual Meeting, San Diego, CA_ - 09/2015 [PDF](/assets/2015_ICAAC_bernauer.pdf)
+* Clinical and Microbiological Characterization of Recurrent Invasive Methicillin Resistant Staphylococcus aureus (MRSA) Infections, _ICAAC/ICC Annual Meeting, San Diego, CA_ - 09/2015 [PDF](/assets/2015_ICAAC_bernauer_shroba.pdf)
+* Trajectory and Long-Term Outcomes in Patients with MRSA Bacteremia, _ICAAC/ICC Annual Meeting, San Diego, CA_ - 09/2015 [PDF](/assets/2015_ICAAC_bernauer_guillamet.pdf)
+* Development of Intelligent Pharmaceutical Packaging for Real-Time Monitoring of Patient Compliance, _American Association of Pharmaceutical Scientists (AAPS) Meeting and Exposition, San Diego, CA_ - 11/2014 [PDF](/assets/2014_AAPS_abstract.pdf)
+
+## Externships
+* The University of Texas M.D. Anderson Cancer Center Science Park - Research Division Summer Undergraduate Research Program (SURP) - 08/2008 [PNG](/assets/2008_SURP_cert_of_completion.png)
+* University of Bonn, Institute of Pharmacy, Laboratory of Pharmaceutical Technology and Biopharmaceutics, Bonn, Germany. 6/2015 - 8/2015
+
+
+
+## Licensure
+* American Heart Association Heartsaver CPR/AED - 10/2012 to 10/2014 [PNG](/assets/2012_BLS.png)
+* American Health & Safety Institute Basic Life Support 11/2014 to 11/2016 [PNG](/assets/2014_BLS.png)
+* New Mexico Pharmacy Inern License - 09/30/2015 [PNG](/assets/20140913_intern_license_bernauer.png)
+
+## Professional membership
+* American Association of Pharmaceutical Scientists (AAPS) - 08/15/2014 to 08/31/2015 [PDF](/assets/20150718_AAPS_Membership_Certificate.pdf)
+
+
+## Funding/Grants
+* ASM Student and Post Doctoral Fellow Travel Grant, _ICAAC/ICC Annual Meeting_ - 09/15/2015 [PDF](/assets/20150715_travel_grant.pdf)
+
+## Training
+
+### UNM College of Pharmacy
+* Bloodborne Pathogens OSHA (On-Line) - 11/25/2012 [PDF](/assets/20121125_BBP_training_bernauer.pdf)
+* HIPAA Training - 11/26/2012 [PDF](/assets/20121126_HIPAA_training_bernauer.pdf)
+* Bloodborne Pathogens OSHA (On-Line) - 04/10/2013 [PDF](/assets/20130410_BBP_bernauer.pdf)
+* HIPAA and Accounting of Disclosure for HSC - 04/10/2013 [PDF](/assets/20130410_HIPAA_and_accounting_disclosure_bernauer.pdf)
+* HIPAA and Breach Notification for HSC - 04/10/2013 [PDF](/assets/20130410_HIPAA_breach_training_bernauer.pdf)
+* Effective Use of Class II Biological Safety Cabinets - 01/10/2014 [PDF](/assets/20130410_HIPAA_training_bernauer.pdf)
+* Biosafety Training for BSL-1 & BSL-2 Laboratories - 01/10/2014 [PDF](/assets/20140110_BSL2_training_bernauer.pdf)
+* Infectious Waste Management (Online Module - 01/10/2014 [PDF](/assets/20140110_infectious_waste_management_bernauer.pdf)
+* ABSL-2 Working Safely with Laboratory Animals [PDF](/assets/20140110_lab_animals.pdf)
+* HIPAA Training for HSC - 01/22/2014 [PDF](/assets/20140122_HIPAA_training_bernauer.pdf)
+* Bloodborne Pathogens OSHA (On-Line) - 02/18/2014 [PDF](/assets/20140218_BBP_training_bernauer.pdf)
+* HSC Financial Conflicts of Interest Training - 04/13/2014 [PDF](/assets/20140413_COI_training_bernauer.pdf)
+* HSC Compliance Training - 01/08/2015 [PDF](/assets/20150108_compliance_training_bernauer.pdf)
+* UNM/HSC Compliance Training - 02/27/2015 [PDF](/assets/20150227_compliance_training_bernauer.pdf)
+* HIPAA and HITECH Training - 02/27/2015 [PDF](/assets/20150227_HIPAA_and_HITECH_training_bernauer.pdf)
+* HIPAA Security Training - 02/27/2015 [PDF](/assets/20150227_security_training_bernauer.pdf)
+* Bloodborne Pathogens OSHA (On-Line) - 03/07/2015 [PDF](/assets/20150307_BBP_training_bernauer.pdf)
+* HIPAA and HITECH Training - 02/27/2015 [PDF](/assets/20150309_HIPAA_HITECH_training_bernauer.pdf)
+
+### NM VA Healthcare System
+* CITI Collaborative Institutional Training Initiative - 08/03/2011 [PDF](/assets/2011_VA_training_record.pdf)
+* Ethics Most Wanted - 08/03/2011 [PDF](/assets/2011_VA_ethics_training_cert.pdf)
+* VA Privacy and Information Security Awareness and Rules of Behavior - 08/03/2011 [PDF](/assets/2011_VA_security_awareness_cert.pdf)
+* Information Security 201 for Research and Development Personnel - 08/03/2011 [PDF](/assets/2011_VA_information_security_cert.pdf)
+* VHA Privacy Policy Training (Web Based Option) - 08/03/2011 [PDF](/assets/2011_VA_privacy_training_cert.pdf)
+
+
+  </div>
+</div>
+<div>
+
+<!--CONTACT-->
+<div id="contact">
+  <div class="beginning">
+    <h2>contact</h2>
+  </div>
+  <div class="wrap-one">
+    <div class="social">
+      <p class= "about">If you want to get in touch, email is probably best. But you have options.</p>
+      <a href="mailto:" class="mailicon" title="mail"></a>
+      <a href="http://twitter.com/mlbernauer" class="twittericon" title="twitter"></a>
+      <a href="http://www.facebook.com/mbernauer" class="facebookicon" title="facebook"></a>
+      <a href="https://github.com/mlbernauer" class="githubicon" title="github"></a>
+      <a href="https://www.flickr.com/photos/mlbernauer/" class="flickricon" title="flickr"></a>
+    </div>
+  </div>
+</div>
+
+<!--FOOTER-->
+<div id="footer"></div>
+
+
+</div>
+</body>
+</html>
