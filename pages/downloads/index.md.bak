@@ -137,7 +137,7 @@
   <div class="wrap-one">
     <div class="social">
       <p class= "about">If you want to get in touch, email is probably best. But you have options.</p>
-      <a href="mailto:" class="mailicon" title="mail"></a>
+      <a href="mailto:mlbernauer@gmail.com" class="mailicon" title="mail"></a>
       <a href="http://twitter.com/mlbernauer" class="twittericon" title="twitter"></a>
       <a href="http://www.facebook.com/mbernauer" class="facebookicon" title="facebook"></a>
       <a href="https://github.com/mlbernauer" class="githubicon" title="github"></a>
