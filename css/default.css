@@ -319,3 +319,7 @@ margin: 0px 5px;
     width: 90%;
   }
 }
+
+code {
+  font-family: 'Consolas', 'Monaco', 'Lucida Console';
+}
