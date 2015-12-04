@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Snow</title>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.19/p5.js"></script>
+        <style>body {padding: 0; margin: 0;}</style>
+    </head>
+<body>
+<script type="text/javascript">
+var rainDropX;
+var rainDropY;
+var backgroundColor;
+var rainDropSpeed;
+var rainDropAccel;
+var rainDropMass;
+var xoff = 0.0;
+
+function setup(){
+    createCanvas(displayWidth, displayHeight);
+    backgroundColor = color("#1B262F");
+    background(backgroundColor);
+    smooth();
+    stroke(255);
+    fill(255);
+    rainDropX = new Array();
+    rainDropY = new Array();
+    rainDropAccel = new Array();
+    rainDropMass = new Array();
+    numberOfRainDrops = 200;
+    rainDropSpeed = 0.5;
+    for(var i = 0; i < numberOfRainDrops; i++){
+        append(rainDropX, random(width));
+        append(rainDropY, random(height));
+        append(rainDropMass, random(5)+2);
+        append(rainDropAccel, rainDropMass[i]*rainDropSpeed);
+    }
+}
+
+function draw(){
+    background(backgroundColor);
+    for(var i = 0; i < numberOfRainDrops; i++){
+        rainDropY[i] += rainDropAccel[i];
+        rainDropX[i] += noise(xoff)*rainDropAccel[i];
+        xoff += 0.001;
+        ellipse(rainDropX[i], rainDropY[i], rainDropMass[i], rainDropMass[i]);
+        if(rainDropY[i] > height){
+            rainDropX[i] = random(width);
+            rainDropY[i] = 0;
+        }
+        if(rainDropX[i] > width){
+            rainDropX[i] = 0;
+        }
+    }
+}
+
+
+
+</script>
+</body>
+</html>
+
+
