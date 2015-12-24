@@ -40,7 +40,7 @@ div.content img {
   max-width: 100%
 }
 div.content {
-  width: 640px;
+  width: 100%;
 margin: auto;
 }
 
