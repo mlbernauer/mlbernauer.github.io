@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael L. Bernauer</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/img/portrait_crop.png"/>
+  <link type="text/css" rel="stylesheet" media="all" href="/css/reset.css"/>
+  <link type="text/css" rel="stylesheet" media="all" href="/css/page.css"/>
+  <link type="text/css" rel="stylesheet" media="all" href="/css/syntax.css"/>
+  <script type="text/javascript" src="/js/smoothscroll.js">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+
+  <!-- Used to display interactive particle banner -->
+  <!--
+  <script language="javascript" src="/js/p5.js"></script>
+  <script src="/banner/sketch.js"></script>
+  -->
+</head>
+
+
+<body>
+
+<div id="header">
+  <div class="transparent">
+    <div class="nav">
+      <ul>
+        <li><a href="http://mlbernauer.github.io/#home">Michael L. Bernauer</a></li>
+        <li><a href="http://mlbernauer.github.io/#about">About</a></li>
+        <li><a href="http://mlbernauer.github.io/#projects">Projects</a></li>
+        <li><a href="http://mlbernauer.github.io/assets/2015_bernauer_curriculum_vitae.pdf">Curriculum Vitae</a></li>
+        <li><a href="/pages/downloads">Downloads</a></li>
+        <li><a href="/pages/slides">Slides</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content">
+    <h1>Medicare Drug Claims, 2013</h1>
+    <div class="deets">
+      <span class="date"></span>
+    </div>
+    
+    <h4 id="medicare-drug-claims:-top-200-by-claims,-2013">Medicare Drug Claims: Top 200 by Claims, 2013</h4>
+
+<iframe id="myiframe" srcdoc=' &lt;!doctype HTML&gt;
+&lt;meta charset = &#039;utf-8&#039;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&#039;stylesheet&#039; href=&quot;http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css&quot;&gt;
+    
+    &lt;script src=&#039;../../js/polychart2.standalone.js&#039; type=&#039;text/javascript&#039;&gt;&lt;/script&gt;
+    
+     &lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js&quot;&gt;&lt;/script&gt;
+     &lt;script src=&quot;http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;style&gt;
+    .rChart {
+      display: block
+      margin: auto auto;
+      width: 100%;
+      height: 400px;
+    }
+    .bs-docs-example:after {
+      content: &quot;&quot;;
+      background: transparent;
+      border: none;
+    }
+    &lt;/style&gt;
+    
+  &lt;/head&gt;
+  &lt;body ng-app&gt;
+      
+    &lt;div class=&#039;container&#039; ng-controller=&quot;DemoCtrl&quot; ng-init=&quot;drawChart()&quot;&gt;
+  &lt;div class=&#039;row&#039;&gt;
+    &lt;div class=&#039;col-md-3&#039;&gt;
+      &lt;form class=&#039;well&#039;&gt;
+        &lt;label&gt;&lt;b&gt;Select  x :&lt;/b&gt;&lt;/label&gt;
+            &lt;select class=&#039;form-control&#039; ng-model=&quot;opts.x.var&quot; 
+          ng-options=&quot;ctl for ctl in controls.x.values&quot;&gt;   
+            &lt;/select&gt;&lt;br&gt;
+        &lt;label&gt;&lt;b&gt;Select  y :&lt;/b&gt;&lt;/label&gt;
+            &lt;select class=&#039;form-control&#039; ng-model=&quot;opts.y.var&quot; 
+          ng-options=&quot;ctl for ctl in controls.y.values&quot;&gt;   
+            &lt;/select&gt;&lt;br&gt;
+        &lt;label&gt;&lt;b&gt;Select  size :&lt;/b&gt;&lt;/label&gt;
+            &lt;select class=&#039;form-control&#039; ng-model=&quot;opts.size.var&quot; 
+          ng-options=&quot;ctl for ctl in controls.size.values&quot;&gt;   
+            &lt;/select&gt;&lt;br&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class=&#039;col-md-9&#039;&gt;
+      &lt;div class=&quot;bs-docs-example&quot;&gt;
+        &lt;div id=&#039;charte7148aeda45&#039; class=&#039;rChart &#039;&gt;
+          &lt;svg&gt;&lt;/svg&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;script type=&#039;text/javascript&#039;&gt;
+function DemoCtrl($scope){
+  $scope.chartParams = {
+ &quot;dom&quot;: &quot;charte7148aeda45&quot;,
+&quot;width&quot;:    800,
+&quot;height&quot;:    400,
+&quot;layers&quot;: [
+ {
+ &quot;x&quot;: &quot;Beneficiaries&quot;,
+&quot;y&quot;: &quot;Cost&quot;,
+&quot;data&quot;: {
+ &quot;Drug&quot;: [ &quot;LEVOTHYROXINE SODIUM&quot;, &quot;LISINOPRIL&quot;, &quot;SIMVASTATIN&quot;, &quot;AMLODIPINE BESYLATE&quot;, &quot;HYDROCODONE/ACETAMINOPHEN&quot;, &quot;OMEPRAZOLE&quot;, &quot;ATORVASTATIN CALCIUM&quot;, &quot;FUROSEMIDE&quot;, &quot;METFORMIN HCL&quot;, &quot;METOPROLOL TARTRATE&quot;, &quot;GABAPENTIN&quot;, &quot;HYDROCHLOROTHIAZIDE&quot;, &quot;POTASSIUM CHLORIDE&quot;, &quot;WARFARIN SODIUM&quot;, &quot;METOPROLOL SUCCINATE&quot;, &quot;LOSARTAN POTASSIUM&quot;, &quot;CLOPIDOGREL BISULFATE&quot;, &quot;PRAVASTATIN SODIUM&quot;, &quot;ATENOLOL&quot;, &quot;CARVEDILOL&quot;, &quot;TRAMADOL HCL&quot;, &quot;ALPRAZOLAM&quot;, &quot;ZOLPIDEM TARTRATE&quot;, &quot;TAMSULOSIN HCL&quot;, &quot;SERTRALINE HCL&quot;, &quot;CITALOPRAM HYDROBROMIDE&quot;, &quot;ALBUTEROL SULFATE&quot;, &quot;PREDNISONE&quot;, &quot;LORAZEPAM&quot;, &quot;PANTOPRAZOLE SODIUM&quot;, &quot;FLUTICASONE PROPIONATE&quot;, &quot;ROSUVASTATIN CALCIUM&quot;, &quot;TRAZODONE HCL&quot;, &quot;CLONAZEPAM&quot;, &quot;DONEPEZIL HCL&quot;, &quot;OXYCODONE HCL/ACETAMINOPHEN&quot;, &quot;ALENDRONATE SODIUM&quot;, &quot;ESOMEPRAZOLE MAGNESIUM&quot;, &quot;GLIPIZIDE&quot;, &quot;INSULIN GLARGINE,HUM.REC.ANLOG&quot;, &quot;MELOXICAM&quot;, &quot;ALLOPURINOL&quot;, &quot;LISINOPRIL/HYDROCHLOROTHIAZIDE&quot;, &quot;RANITIDINE HCL&quot;, &quot;QUETIAPINE FUMARATE&quot;, &quot;MEMANTINE HCL&quot;, &quot;OXYCODONE HCL&quot;, &quot;DULOXETINE HCL&quot;, &quot;AZITHROMYCIN&quot;, &quot;FLUTICASONE/SALMETEROL&quot;, &quot;DILTIAZEM HCL&quot;, &quot;MONTELUKAST SODIUM&quot;, &quot;LOVASTATIN&quot;, &quot;VALSARTAN&quot;, &quot;ESCITALOPRAM OXALATE&quot;, &quot;CIPROFLOXACIN HCL&quot;, &quot;ISOSORBIDE MONONITRATE&quot;, &quot;LATANOPROST&quot;, &quot;FLUOXETINE HCL&quot;, &quot;GLIMEPIRIDE&quot;, &quot;TIOTROPIUM BROMIDE&quot;, &quot;LOSARTAN/HYDROCHLOROTHIAZIDE&quot;, &quot;MIRTAZAPINE&quot;, &quot;RISPERIDONE&quot;, &quot;DIGOXIN&quot;, &quot;ENALAPRIL MALEATE&quot;, &quot;AMOXICILLIN&quot;, &quot;CLONIDINE HCL&quot;, &quot;SPIRONOLACTONE&quot;, &quot;TRIAMTERENE/HYDROCHLOROTHIAZID&quot;, &quot;PAROXETINE HCL&quot;, &quot;BUPROPION HCL&quot;, &quot;DIVALPROEX SODIUM&quot;, &quot;VENLAFAXINE HCL&quot;, &quot;IBUPROFEN&quot;, &quot;SITAGLIPTIN PHOSPHATE&quot;, &quot;OXYBUTYNIN CHLORIDE&quot;, &quot;FINASTERIDE&quot;, &quot;AMITRIPTYLINE HCL&quot;, &quot;CYCLOBENZAPRINE HCL&quot;, &quot;PREGABALIN&quot;, &quot;SULFAMETHOXAZOLE/TRIMETHOPRIM&quot;, &quot;DICLOFENAC SODIUM&quot;, &quot;FAMOTIDINE&quot;, &quot;MORPHINE SULFATE&quot;, &quot;CEPHALEXIN&quot;, &quot;EZETIMIBE&quot;, &quot;DIAZEPAM&quot;, &quot;LEVOFLOXACIN&quot;, &quot;HYDRALAZINE HCL&quot;, &quot;BENAZEPRIL HCL&quot;, &quot;CELECOXIB&quot;, &quot;VALSARTAN/HYDROCHLOROTHIAZIDE&quot;, &quot;NIFEDIPINE&quot;, &quot;POLYETHYLENE GLYCOL 3350&quot;, &quot;TRIAMCINOLONE ACETONIDE&quot;, &quot;FENTANYL&quot;, &quot;LEVETIRACETAM&quot;, &quot;OLANZAPINE&quot;, &quot;TEMAZEPAM&quot;, &quot;NEEDLES, INSULIN DISPOSABLE&quot;, &quot;NAPROXEN&quot;, &quot;LAMOTRIGINE&quot;, &quot;DOXAZOSIN MESYLATE&quot;, &quot;CARBIDOPA/LEVODOPA&quot;, &quot;RAMIPRIL&quot;, &quot;ARIPIPRAZOLE&quot;, &quot;AMLODIPINE BESYLATE/BENAZEPRIL&quot;, &quot;INSULIN ASPART&quot;, &quot;VERAPAMIL HCL&quot;, &quot;BACLOFEN&quot;, &quot;ROPINIROLE HCL&quot;, &quot;PREDNISOLONE ACETATE&quot;, &quot;PROPRANOLOL HCL&quot;, &quot;TIZANIDINE HCL&quot;, &quot;ESTRADIOL&quot;, &quot;BENZTROPINE MESYLATE&quot;, &quot;PIOGLITAZONE HCL&quot;, &quot;NITROGLYCERIN&quot;, &quot;AMOXICILLIN/POTASSIUM CLAV&quot;, &quot;TIMOLOL MALEATE&quot;, &quot;BUSPIRONE HCL&quot;, &quot;TOPIRAMATE&quot;, &quot;FENOFIBRATE&quot;, &quot;BUDESONIDE/FORMOTEROL FUMARATE&quot;, &quot;GLYBURIDE&quot;, &quot;METHYLPREDNISOLONE&quot;, &quot;TERAZOSIN HCL&quot;, &quot;DOXYCYCLINE HYCLATE&quot;, &quot;BIMATOPROST&quot;, &quot;NEBIVOLOL HCL&quot;, &quot;METHOTREXATE SODIUM&quot;, &quot;INSULIN DETEMIR&quot;, &quot;ACETAMINOPHEN WITH CODEINE&quot;, &quot;BRIMONIDINE TARTRATE&quot;, &quot;FENOFIBRATE NANOCRYSTALLIZED&quot;, &quot;LIDOCAINE&quot;, &quot;SOLIFENACIN SUCCINATE&quot;, &quot;AMIODARONE HCL&quot;, &quot;TRAVOPROST&quot;, &quot;GEMFIBROZIL&quot;, &quot;MECLIZINE HCL&quot;, &quot;OMEGA-3 ACID ETHYL ESTERS&quot;, &quot;IPRATROPIUM/ALBUTEROL SULFATE&quot;, &quot;ESTROGENS, CONJUGATED&quot;, &quot;CARISOPRODOL&quot;, &quot;LANSOPRAZOLE&quot;, &quot;PHENYTOIN SODIUM EXTENDED&quot;, &quot;NYSTATIN&quot;, &quot;INSULIN LISPRO&quot;, &quot;LACTULOSE&quot;, &quot;PROMETHAZINE HCL&quot;, &quot;DORZOLAMIDE HCL/TIMOLOL MALEAT&quot;, &quot;RALOXIFENE HCL&quot;, &quot;CARBAMAZEPINE&quot;, &quot;OLMESARTAN MEDOXOMIL&quot;, &quot;HYDROXYCHLOROQUINE SULFATE&quot;, &quot;RIVAROXABAN&quot;, &quot;FLUCONAZOLE&quot;, &quot;MOMETASONE FUROATE&quot;, &quot;DUTASTERIDE&quot;, &quot;CLOBETASOL PROPIONATE&quot;, &quot;QUINAPRIL HCL&quot;, &quot;METHADONE HCL&quot;, &quot;DEXLANSOPRAZOLE&quot;, &quot;METOCLOPRAMIDE HCL&quot;, &quot;MUPIROCIN&quot;, &quot;DABIGATRAN ETEXILATE MESYLATE&quot;, &quot;KETOCONAZOLE&quot;, &quot;PRAMIPEXOLE DI-HCL&quot;, &quot;RIVASTIGMINE&quot;, &quot;CLOZAPINE&quot;, &quot;CYCLOSPORINE&quot;, &quot;LITHIUM CARBONATE&quot;, &quot;BUMETANIDE&quot;, &quot;NIACIN&quot;, &quot;SYRING W-NDL,DISP,INSUL,0.5ML&quot;, &quot;HYDROXYZINE HCL&quot;, &quot;CLOTRIMAZOLE/BETAMETHASONE DIP&quot;, &quot;SUCRALFATE&quot;, &quot;HUM INSULIN NPH/REG INSULIN HM&quot;, &quot;HALOPERIDOL&quot;, &quot;ZOSTER VACCINE LIVE/PF&quot;, &quot;ANASTROZOLE&quot;, &quot;CHLORTHALIDONE&quot;, &quot;TOLTERODINE TARTRATE&quot;, &quot;NITROFURANTOIN MONOHYD/M-CRYST&quot;, &quot;IRBESARTAN&quot;, &quot;BRIMONIDINE TARTRATE/TIMOLOL&quot;, &quot;LABETALOL HCL&quot;, &quot;COLCHICINE&quot;, &quot;FENOFIBRATE,MICRONIZED&quot;, &quot;SOTALOL HCL&quot;, &quot;NORTRIPTYLINE HCL&quot;, &quot;SITAGLIPTIN PHOS/METFORMIN HCL&quot;, &quot;TORSEMIDE&quot;, &quot;ZIPRASIDONE HCL&quot;, &quot;EZETIMIBE/SIMVASTATIN&quot;, &quot;OLOPATADINE HCL&quot;, &quot;DICYCLOMINE HCL&quot; ],
+&quot;Cost&quot;: [ 5.5951e+08, 3.0244e+08, 4.291e+08, 3.4014e+08, 5.594e+08, 6.295e+08, 9.2381e+08, 1.4154e+08, 3.2281e+08, 1.5729e+08, 5.2229e+08, 1.0792e+08, 5.1059e+08, 2.1842e+08, 7.1454e+08, 3.0236e+08, 6.5547e+08, 2.6119e+08, 1.0146e+08, 1.5534e+08, 1.3788e+08, 9.0475e+07, 1.1891e+08, 2.5899e+08, 1.325e+08, 9.2424e+07, 5.0954e+08, 5.1523e+07, 8.3517e+07, 1.768e+08, 3.7663e+08, 2.0892e+09, 7.1469e+07, 6.9967e+07, 2.6172e+08, 2.577e+08, 9.4507e+07, 2.3203e+09, 1.0273e+08, 2.3716e+09, 6.079e+07, 5.8052e+07, 7.662e+07, 8.5481e+07, 9.6472e+08, 1.4801e+09, 1.0422e+09, 1.7791e+09, 8.3103e+07, 2.1352e+09, 2.5776e+08, 2.7503e+08, 9.4387e+07, 1.1231e+09, 2.8814e+08, 4.1349e+07, 1.0312e+08, 1.2062e+08, 8.5747e+07, 5.6679e+07, 1.7788e+09, 1.1584e+08, 7.8223e+07, 1.368e+08, 5.0441e+07, 4.5943e+07, 2.4759e+07, 4.2006e+07, 6.096e+07, 5.5225e+07, 8.7401e+07, 1.7765e+08, 2.8815e+08, 1.7818e+08, 2.9305e+07, 1.309e+09, 1.7476e+08, 1.1734e+08, 2.1806e+07, 4.2514e+07, 9.1468e+08, 2.3854e+07, 2.0672e+08, 4.1761e+07, 2.2457e+08, 2.6527e+07, 7.7415e+08, 2.6367e+07, 4.6379e+07, 8.0752e+07, 3.3864e+07, 7.9705e+08, 3.3375e+08, 1.4305e+08, 7.9679e+07, 6.2823e+07, 4.3323e+08, 1.9553e+08, 4.7907e+08, 3.6496e+07, 1.1318e+08, 2.4327e+07, 1.3352e+08, 4.512e+07, 1.1702e+08, 6.2542e+07, 1.8911e+09, 1.737e+08, 8.0965e+08, 6.5567e+07, 3.1724e+07, 9.6901e+07, 5.6459e+07, 5.6847e+07, 6.7162e+07, 1.1545e+08, 1.9642e+07, 3.0349e+08, 4.7588e+07, 4.8953e+07, 5.0716e+07, 4.4161e+07, 8.5238e+07, 1.3663e+08, 5.5569e+08, 4.9938e+07, 4.9135e+07, 2.4408e+07, 1.4134e+08, 3.0655e+08, 2.0347e+08, 1.2408e+08, 6.2551e+08, 2.5295e+07, 1.875e+08, 2.8484e+08, 5.8882e+08, 4.4798e+08, 3.6867e+07, 2.6093e+08, 4.3737e+07, 3.2885e+07, 3.6503e+08, 2.9952e+08, 2.3403e+08, 2.8484e+07, 1.4147e+08, 4.4172e+07, 5.4602e+07, 5.0258e+08, 2.944e+07, 1.977e+07, 6.1275e+07, 3.7053e+08, 7.3567e+07, 2.412e+08, 3.0781e+07, 4.1091e+08, 1.5931e+07, 1.9244e+08, 2.4229e+08, 5.1677e+07, 2.7931e+07, 2.1913e+07, 2.3884e+08, 1.1291e+07, 1.9307e+07, 4.0742e+08, 2.6173e+07, 5.5933e+07, 3.9597e+08, 1.4917e+08, 4.0762e+08, 1.7095e+07, 1.4114e+07, 2.801e+08, 2.7612e+07, 2.2323e+07, 5.891e+07, 6.3638e+07, 2.1191e+08, 2.4611e+07, 1.8695e+08, 3.8477e+07, 1.869e+07, 2.141e+08, 4.431e+07, 5.5673e+07, 1.2705e+08, 4.4229e+07, 1.9201e+08, 7.5842e+07, 2.279e+07, 1.2363e+07, 2.9299e+08, 2.025e+07, 2.1032e+08, 2.2119e+08, 1.3093e+08, 8.092e+06 ],
+&quot;Beneficiaries&quot;: [ 7.4083e+06, 8.0967e+06, 7.8105e+06, 7.0484e+06, 1.0844e+07, 6.902e+06, 5.689e+06, 5.6093e+06, 4.9534e+06, 4.1476e+06, 3.9557e+06, 3.7444e+06, 2.8256e+06, 2.6021e+06, 3.0447e+06, 2.9744e+06, 2.6398e+06, 2.7332e+06, 2.4783e+06, 2.3262e+06, 3.6949e+06, 2.3314e+06, 2.0219e+06, 1.9957e+06, 1.5512e+06, 1.667e+06, 2.8828e+06, 4.121e+06, 1.8234e+06, 1.7005e+06, 3.1867e+06, 1.4059e+06, 1.467e+06, 1.1843e+06, 1.0688e+06, 2.3417e+06, 1.199e+06, 1.0608e+06, 8.6716e+05, 9.5106e+05, 1.9564e+06, 1.0625e+06, 1.2264e+06, 1.1591e+06, 7.5609e+05, 5.9759e+05, 1.1345e+06, 6.3709e+05, 4.8359e+06, 1.093e+06, 3.4526e+05, 8.6107e+05, 9.245e+05, 6.2916e+05, 6.846e+05, 4.3166e+06, 7.911e+05, 1.0805e+06, 6.2208e+05, 7.9865e+05, 7.7582e+05, 6.8463e+05, 6.4725e+05, 5.3629e+05, 4.7806e+05, 5.527e+05, 3.2306e+06, 5.7038e+05, 5.6231e+05, 5.3231e+05, 3.6688e+05, 3.4066e+05, 3.7113e+05, 2.5584e+05, 1.3911e+06, 4.1052e+05, 3.8496e+05, 6.0036e+05, 3.4362e+05, 9.0999e+05, 3.7557e+05, 2.1825e+06, 1.0207e+06, 5.0019e+05, 4.7962e+05, 2.405e+06, 3.1862e+05, 4.8391e+05, 2.384e+06, 4.2869e+05, 3.3285e+05, 4.1376e+05, 2.8145e+05, 2.6448e+05, 6.6193e+05, 1.3264e+06, 3.1474e+05, 2.5809e+05, 2.3597e+05, 4.0016e+05, 5.0939e+05, 7.8561e+05, 2.6933e+05, 2.7972e+05, 3.0562e+05, 2.7204e+05, 2.8331e+05, 2.0148e+05, 3.272e+05, 1.0082e+05, 3.5692e+05, 1.6868e+05, 1.394e+06,  91520, 4.7489e+05, 2.693e+05, 2.8761e+05, 1.7298e+05, 8.8736e+05, 1.6428e+06, 4.8082e+05, 2.0656e+05, 2.0221e+05, 2.162e+05, 3.2579e+05, 1.7983e+05, 1.5361e+06, 1.7696e+05, 1.1052e+06, 4.0734e+05, 1.701e+05, 3.3225e+05, 1.5856e+05, 5.9404e+05, 3.6046e+05,  90490, 3.8084e+05, 1.9882e+05, 2.5033e+05, 3.5008e+05, 1.3411e+05, 4.5579e+05, 1.5295e+05, 2.6911e+05, 2.0416e+05, 1.882e+05,  92358,  44379, 4.5209e+05, 1.981e+05, 1.8423e+05, 4.388e+05, 3.2808e+05,  84346,  41967,  80818, 2.5235e+05, 2.0843e+05, 5.7016e+05, 3.3182e+05, 1.3595e+05, 6.0166e+05,  71954, 1.3455e+05, 1.2668e+05, 2.084e+05, 7.0514e+05,  99133, 4.7082e+05,  70156, 1.213e+05,  35703, 3.5088e+05,  97276, 1.2102e+05,  81544, 1.2107e+05, 1.6172e+05, 4.3272e+05, 1.6822e+05,  45813,  89607, 1.0016e+06, 1.714e+05, 1.1528e+05,  17188, 5.1056e+05,  67740, 1.7216e+05,  51646, 1.0231e+05,  73897,  94338, 1.0151e+05,  57532, 1.1371e+05,  61784,  36494, 1.8904e+05, 1.6245e+05 ],
+&quot;Claims&quot;: [ 40040908, 36213182, 36185092, 33951483, 33521291, 31500544, 26205342, 25707232, 25065694, 20368244, 18720514, 17456861, 17310975, 17294245, 16454603, 15258501, 14813982, 13489543, 13415626, 12548020, 12283472, 11955014, 11163599, 10572984, 10495176, 10444306, 9626270, 9143363, 9033825, 9033193, 8911077, 8602219, 8577320, 8382221, 8032628, 7723401, 7627074, 7622616, 7582410, 7520113, 7170080, 7123625, 7046625, 6974816, 6902996, 6673810, 6417923, 6371000, 6251733, 6241675, 6106471, 6006471, 5994849, 5964371, 5887097, 5794618, 5740969, 5608505, 5561104, 5242476, 5237141, 5093152, 4907459, 4703637, 4574255, 4521898, 4492560, 4413195, 4395728, 4387951, 4315457, 4301631, 4237415, 4150313, 4101187, 3983386, 3961038, 3934452, 3720194, 3622148, 3573985, 3505340, 3496442, 3467839, 3448155, 3407105, 3309876, 3258469, 3197339, 3174587, 3139786, 3103252, 3096935, 3088224, 3085597, 2792937, 2783412, 2783366, 2779192, 2770242, 2764163, 2763843, 2756286, 2732030, 2704544, 2696478, 2621419, 2495445, 2489366, 2389611, 2324964, 2297141, 2260442, 2239540, 2235844, 2214675, 2212424, 2205395, 2190382, 2171377, 2116805, 2111895, 2090225, 2060377, 2017908, 2003494, 1970832, 1949317, 1948134, 1936799, 1927897, 1911155, 1907188, 1901295, 1871834, 1866880, 1856301, 1855332, 1850402, 1820170, 1800117, 1748978, 1683952, 1677814, 1646103, 1624758, 1579784, 1575681, 1541464, 1474120, 1448125, 1435476, 1433430, 1425755, 1409441, 1381325, 1362776, 1361245, 1359146, 1342268, 1331968, 1324891, 1302539, 1284733, 1276711, 1250069, 1231845, 1225927, 1219957, 1210522, 1195348, 1167120, 1155904, 1150436, 1105859, 1102361, 1094258, 1094246, 1083434, 1076352, 1061090, 1020718, 1006721, 1003903, 996760, 984782, 978965, 965667, 958751, 951870, 946359, 934116, 931446, 929649, 929461, 924941, 920847, 916128, 908165, 887831 ] 
+},
+&quot;facet&quot;: null,
+&quot;size&quot;: &quot;Claims&quot;,
+&quot;type&quot;: &quot;point&quot;,
+&quot;tooltip&quot;: function(item){return item.Drug} 
+} 
+],
+&quot;facet&quot;: [],
+&quot;guides&quot;: [],
+&quot;coord&quot;: [],
+&quot;title&quot;: &quot;Medicare Drug Claims: Top 200 by Claims, 2013&quot;,
+&quot;id&quot;: &quot;charte7148aeda45&quot; 
+}
+  _.each($scope.chartParams.layers, function(el){
+    el.data = polyjs.data(el.data)
+  })
+      
+  $scope.controls = {
+ &quot;x&quot;: {
+ &quot;name&quot;: &quot;x&quot;,
+&quot;value&quot;: &quot;Beneficiaries&quot;,
+&quot;values&quot;: [ &quot;Beneficiaries&quot;, &quot;Cost&quot;, &quot;Claims&quot; ],
+&quot;label&quot;: &quot;Select  x :&quot; 
+},
+&quot;y&quot;: {
+ &quot;name&quot;: &quot;y&quot;,
+&quot;value&quot;: &quot;Cost&quot;,
+&quot;values&quot;: [ &quot;Beneficiaries&quot;, &quot;Cost&quot;, &quot;Claims&quot; ],
+&quot;label&quot;: &quot;Select  y :&quot; 
+},
+&quot;size&quot;: {
+ &quot;name&quot;: &quot;size&quot;,
+&quot;value&quot;: &quot;Claims&quot;,
+&quot;values&quot;: [ &quot;Beneficiaries&quot;, &quot;Cost&quot;, &quot;Claims&quot; ],
+&quot;label&quot;: &quot;Select  size :&quot; 
+} 
+}
+  $scope.opts = $scope.chartParams.layers[0];
+    
+  $scope.drawChart = function(){
+    $scope.chart = polyjs.chart($scope.chartParams)
+    }
+
+  $scope.updateChart = function(){
+    $scope.chart.make($scope.chartParams)
+    }
+        
+    $scope.$watch(&#039;opts&#039;, function(){
+      $scope.chartParams.layers[0] = $scope.opts;
+      $scope.updateChart();
+    }, true)
+}
+&lt;/script&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt; ' scrolling='no' frameBorder='0' seamless class='rChart  polycharts  ' id='iframe-charte7148aeda45'> </iframe>
+
+<p><style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+  </div>
+</div>
+<div>
+
+<!--CONTACT-->
+<div id="contact">
+  <div class="beginning">
+    <h2>contact</h2>
+  </div>
+  <div class="wrap-one">
+    <div class="social">
+      <p class= "about">If you want to get in touch, email is probably best. But you have options.</p>
+      <a href="mailto:mlbernauer@gmail.com" class="mailicon" title="mail"></a>
+      <a href="http://twitter.com/mlbernauer" class="twittericon" title="twitter"></a>
+      <a href="http://www.facebook.com/mbernauer" class="facebookicon" title="facebook"></a>
+      <a href="https://github.com/mlbernauer" class="githubicon" title="github"></a>
+      <a href="https://www.flickr.com/photos/mlbernauer/" class="flickricon" title="flickr"></a>
+    </div>
+  </div>
+</div>
+
+<!--FOOTER-->
+<div id="footer"></div>
+
+
+</div>
+</body>
+</html>

@@ -18,11 +18,11 @@ line-height: 1.6;
 text-align: left;
 line-height: 1.6em;
 font-weight: 200;
-line-height: 1.6em;
+/*line-height: 1.6em;*/
 
 }
 .container img {
-  display: block;
+ /* display: block;*/
   margin: 20px 0px;
   clear: both;
 }
@@ -40,7 +40,7 @@ div.content img {
   max-width: 100%
 }
 div.content {
-  width: 640px;
+  width: 100%;
 margin: auto;
 }
 
