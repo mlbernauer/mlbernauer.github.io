@@ -14,8 +14,7 @@ body {
   padding:0;
   color: #444;
 }
-.container {
-/*font-family: Georgia, serif;*/
+.page_container {
 font-family: 'Helvetica', 'Open Sans', sans-serif;
 font-size: 15px;
 line-height: 1.6;
@@ -26,7 +25,31 @@ line-height: 1.6em;
 width: 900px;
 margin: 100px auto;
 }
-.container img {
+
+.page_container h1{
+ font-family: 'Cambo', serif;
+ font-size: 40px;
+ letter-spacing: 1px;
+ text-align: center;
+ color: #1B262F;
+ opacity: 0.7;
+}
+.page_container h2{
+ font-family: 'Cambo', serif;
+ font-size: 30px;
+ letter-spacing: 1px;
+ text-align: center;
+ color: #1B262F;
+ opacity: 0.7;
+}
+
+.page_container iframe {
+  align: center
+  padding-left: 0px; 
+  margin-left: 0px;
+}
+
+.page_container img {
   display: block;
   margin: 20px 0px;
   clear: both;
