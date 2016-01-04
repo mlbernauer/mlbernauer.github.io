@@ -63,19 +63,26 @@ margin: 100px auto;
 }
 
 
-ul {
+.page_container ul {
+    font-family: 'Helvetica';
     list-style-type: circle;
-    margin-left: 45px;
+    margin-left: 35px;
     color: #1B262F;
-    opacity: 0.7;
+
 }
 
 
-ol {
+.page_container ol {
+    font-family: 'Helvetica';
     list-style-type: circle;
-    margin-left: 45px;
+    margin-left: 35px;
     color: #1B262F;
-    opacity: 0.7;
+
+}
+
+.page_container p {
+    color: #1B262F;
+
 }
 
 a {
@@ -110,7 +117,7 @@ h2 {
 
 h3 {
   font-family: 'Cambo', serif;
-  font-size: 20px;
+  font-size: 25px;
  /* letter-spacing: 1px;*/
   line-height: 20px;
   margin-bottom: 10px;
@@ -120,9 +127,8 @@ h3 {
 }
 
 h4 {
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-family: 'Cambo', serif;
+  font-size: 20px;
   color: #6e6e6e;
 
 }
@@ -130,8 +136,6 @@ h4 {
 h1
  {
  font-family: 'Cambo', serif;
- font-size: 55px;
- letter-spacing: 1px;
  text-align: center;
  color: #fff;
 }
