@@ -201,9 +201,10 @@ margin: 22px 40px 0 0px;
 #home {
 background: scroll center bottom #1B262F;
 height: 800px;
-padding-top: 325px;
+padding-top: 400px;
 width: 100%;
 }
+
 
 #about {
     height: 350px;
@@ -384,4 +385,22 @@ margin: 0px 5px;
 code {
   font-family: 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New';
   font-weight: bold;
+}
+
+p.about {
+  font-size: 16px;
+  font-family: 'Helvetica', 'Open Sans', Helvetica, sans-serif;
+  color: #6e6e6e;
+}
+
+p.gulp {
+  font-size: 16px;
+  font-family: 'Helvetica', 'Open Sans', Helvetica, sans-serif;
+  color: #6e6e6e;
+}
+
+p.quote {
+  font-family: 'Helvetica', 'Open Sans', Helvetica, sans-serif;
+  font-size: 15px;
+  color: #6e6e6e;
 }
