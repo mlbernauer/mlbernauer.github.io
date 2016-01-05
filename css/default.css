@@ -30,7 +30,6 @@ color: #444;
  font-family: 'Cambo', serif;
  font-size: 30px;
  text-align: left;
-/* color: #1B262F;*/
  opacity: 0.7;
 }
 
@@ -38,7 +37,6 @@ color: #444;
  font-family: 'Cambo', serif;
  font-size: 20;
  text-align: left;
- color: #1B262F;
  opacity: 0.7;
 }
 
@@ -62,42 +60,28 @@ color: #444;
   clear: both;
 }
 
-
+/*
 .page_container ul {
-    font-family: 'Helvetica';
     list-style-type: circle;
     margin-left: 35px;
-/*    color: #1B262F;*/
-
+    color: #1B262F;
 }
-
 
 .page_container ol {
-    font-family: 'Helvetica';
     list-style-type: circle;
     margin-left: 35px;
-/*    color: #1B262F;*/
+    color: #1B262F;
 
 }
-
-.page_container p {
-/*    color: #1B262F;*/
-
-}
-
+*/
 a {
   color: #42affa;
   text-decoration: none;
 }
 
+/* LINKS */
 a:hover {
     color: #444;
-}
-
-p {
-  color: #6e6e6e;
-  margin: 0 0 15px;
-  margin-top: 18px;
 }
 
 .about {
