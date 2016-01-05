@@ -1,13 +1,6 @@
-/*
-Red: da2820
-UNM teal: 121f1f
-Dark slate gray: 121f1f
-Dark blue: 12191f
-*/
-
 body {
-  font-family: 'Helvetica', 'Open Sans', Helvetica,sans-serif;
-  font-size:15px;
+  font-family: 'Helvetica', 'Open Sans', Helvetica, sans-serif;
+  font-size:16px;
   line-height: 1.6;
   text-align: left;
   margin:0;
@@ -15,29 +8,36 @@ body {
   color: #444;
 }
 .page_container {
-font-family: 'Helvetica', 'Open Sans', sans-serif;
-font-size: 15px;
+font-family: 'Helvetica', 'Open Sans', Helvetica, sans-serif;
+font-size: 16px;
 line-height: 1.6;
 text-align: justify;
-line-height: 1.6em;
-font-weight: 200;
-line-height: 1.6em;
 width: 900px;
 margin: 100px auto;
+color: #444;
 }
 
 .page_container h1{
  font-family: 'Cambo', serif;
- font-size: 30px;
+ font-size: 40px;
  letter-spacing: 1px;
  text-align: left;
  color: #1B262F;
  opacity: 0.7;
 }
+
 .page_container h2{
  font-family: 'Cambo', serif;
  font-size: 30px;
- letter-spacing: 1px;
+ text-align: left;
+/* color: #1B262F;*/
+ opacity: 0.7;
+}
+
+.page_container h3 {
+ font-family: 'Cambo', serif;
+ font-size: 20;
+ text-align: left;
  color: #1B262F;
  opacity: 0.7;
 }
@@ -67,7 +67,7 @@ margin: 100px auto;
     font-family: 'Helvetica';
     list-style-type: circle;
     margin-left: 35px;
-    color: #1B262F;
+/*    color: #1B262F;*/
 
 }
 
@@ -76,12 +76,12 @@ margin: 100px auto;
     font-family: 'Helvetica';
     list-style-type: circle;
     margin-left: 35px;
-    color: #1B262F;
+/*    color: #1B262F;*/
 
 }
 
 .page_container p {
-    color: #1B262F;
+/*    color: #1B262F;*/
 
 }
 
@@ -107,18 +107,26 @@ p {
 
 }
 
+
+h1{
+ font-family: 'Cambo', serif;
+ text-align: center;
+ font-size: 70px;
+ color: #fff;
+}
+
 h2 {
-    font-size: 30px;
-    font-family: 'Cambo', serif;
-    margin-bottom: 10px;
-    color: #1B262F;
-    opacity: 0.7;
+ font-family: 'Cambo', serif;
+ font-size: 40px;
+ letter-spacing: 1px;
+ color: #1B262F;
+ opacity: 0.7;
 }
 
 h3 {
   font-family: 'Cambo', serif;
-  font-size: 25px;
- /* letter-spacing: 1px;*/
+  text-align: left;
+  font-size: 20px;
   line-height: 20px;
   margin-bottom: 10px;
   color: #1B262F;
@@ -133,12 +141,6 @@ h4 {
 
 }
 
-h1
- {
- font-family: 'Cambo', serif;
- text-align: center;
- color: #fff;
-}
 
 /* NAVIGATION */
 #header {
@@ -163,7 +165,7 @@ box-shadow: 0 0 10px rgba(0,0,0,0.15);
   width: 100%;
   padding: 10px;
   text-align: center;
-  font-size: 12px;
+  font-size: 15px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 400
@@ -171,6 +173,7 @@ box-shadow: 0 0 10px rgba(0,0,0,0.15);
 
 #header .nav li {
 display: inline;
+
 margin: 22px 40px 0 0px;
 }
 
@@ -349,7 +352,7 @@ a.githubicon:hover {
 
   #header .nav {
     min-height: 15px;
-    font-size: 9px;
+    font-size: 12px;
 
   }
 
@@ -370,9 +373,6 @@ margin: 0px 5px;
   width: 80%;
   }
 
-  h1 {
-    font-size:40px;
-  }
 
   .biggulp {
   width: 100%;
