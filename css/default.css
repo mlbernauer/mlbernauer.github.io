@@ -404,3 +404,6 @@ p.quote {
   font-size: 15px;
   color: #6e6e6e;
 }
+th, td {
+  border-bottom: 1px solid #ddd;
+}
