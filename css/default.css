@@ -158,7 +158,7 @@ box-shadow: 0 0 10px rgba(0,0,0,0.15);
   width: 100%;
   padding: 10px;
   text-align: center;
-  font-size: 15px;
+  font-size: 11px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 400
@@ -346,7 +346,7 @@ a.githubicon:hover {
 
   #header .nav {
     min-height: 15px;
-    font-size: 12px;
+    font-size: 10px;
 
   }
 
