@@ -103,7 +103,7 @@ a:hover {
 
 
 h1{
- font-family: 'Cambo', serif;
+ font-family: "Times New Roman", Serif; 
  text-align: center;
  font-size: 70px;
  color: #fff;
@@ -204,7 +204,6 @@ height: 800px;
 padding-top: 400px;
 width: 100%;
 }
-
 
 #about {
     height: 350px;
