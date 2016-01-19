@@ -131,7 +131,7 @@ margin: 22px 40px 0 0px;
 
 
 #home {
-background: url("img/banner-2.gif") repeat-x scroll center bottom #1B262F;
+background: url("img/banner-2.gif") repeat-x scroll center bottom #6b98ae;
 height: 530px;
 padding-top: 280px;
 width: 100%;
@@ -335,9 +335,16 @@ margin: 100px auto;
   clear: both;
 }
 
-ul, ol {
+ul {
   color: #6e6e6e;
+  list-style-type: disc;
+  padding-left: 2.5em;
+}
 
+ol {
+  color: #6e6e6e;
+  padding-left: 2.5em;
+  list-style: decimal;
 }
 
 th, td {
