@@ -20,7 +20,7 @@ a:hover {
 p {
   color: #6e6e6e;
   margin: 0 0 15px;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .about {
@@ -313,6 +313,7 @@ margin: 100px auto;
   font-size: 20px;
   opacity: 0.85;
   color: #6b98ae;
+  padding-top: 10px;
 }
 
 .page_container iframe {
