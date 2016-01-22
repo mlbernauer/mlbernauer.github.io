@@ -11,8 +11,11 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #F0F1EB;
-  background-color: #F0F1EB; }
+/*  background: #F0F1EB;
+  background-color: #F0F1EB; */
+/*  background: #6b98ae;*/
+  background: #fff;
+}
 
 .reveal {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
