@@ -64,10 +64,12 @@ body {
   font-size: 1.55em; }
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1em;
+  text-align: left;}
 
 .reveal h1 {
-  text-shadow: none; }
+  text-shadow: none;
+}
 
 /*********************************************
  * OTHER
@@ -93,7 +95,7 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-  display: inline-block;
+/*  display: inline-block; align all lists to left*/
   text-align: left;
   margin: 0 0 0 2.5em;}
 
@@ -198,6 +200,7 @@ body {
 
 .reveal small {
   display: inline-block;
+  text-align: left;
   font-size: 0.6em;
   line-height: 1.2em;
   vertical-align: top; }
