@@ -135,6 +135,7 @@ background: #6b98ae;
 height: 530px;
 padding-top: 280px;
 width: 100%;
+
 }
 
 
@@ -262,10 +263,6 @@ a.twittericon:hover {
   }
 
   #home {
-    width: 100%;
-  }
-
-  #about {
     width: 100%;
   }
 
