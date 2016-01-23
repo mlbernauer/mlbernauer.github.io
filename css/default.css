@@ -131,7 +131,7 @@ margin: 22px 40px 0 0px;
 
 
 #home {
-background: url("img/banner-2.gif") repeat-x scroll center bottom #6b98ae;
+background: #6b98ae;
 height: 530px;
 padding-top: 280px;
 width: 100%;
@@ -201,7 +201,7 @@ a.mailicon {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  background: url("img/mailicon.png");
+  background: url("../img/mailicon.png");
   }
 
 a.mailicon:hover {
@@ -213,7 +213,7 @@ a.flickricon {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  background: url("img/flickricon.png");
+  background: url("../img/flickricon.png");
   margin-left: 14px;
 
 
@@ -228,7 +228,7 @@ a.facebookicon {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  background: url("img/facebookicon.png");
+  background: url("../img/facebookicon.png");
   margin-left: 15px;
 
   }
@@ -242,7 +242,7 @@ a.twittericon {
   width: 24px;
   height: 24px;
   text-decoration: none;
-  background: url("img/twittericon.png");
+  background: url("../img/twittericon.png");
   margin-left: 20px;
   }
 
