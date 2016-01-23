@@ -257,7 +257,7 @@ a.twittericon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
   #footer {
   width:480px;
   }
@@ -301,7 +301,7 @@ margin: 0px 5px;
   .doublegulp {
     width: 90%;
   }
-}
+}*/
 
 .page_container {
 width: 900px;
