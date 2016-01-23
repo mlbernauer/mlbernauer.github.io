@@ -135,7 +135,6 @@ background: #6b98ae;
 height: 530px;
 padding-top: 280px;
 width: 100%;
-
 }
 
 
@@ -257,12 +256,18 @@ a.twittericon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {*/
+
+@media screen {
   #footer {
   width:480px;
   }
 
   #home {
+    width: 100%;
+  }
+
+  #about {
     width: 100%;
   }
 
