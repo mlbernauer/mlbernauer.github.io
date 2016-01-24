@@ -37,11 +37,9 @@
 
 <div class="center">Created by [Michael L. Bernauer](http://mlbernauer.com)</div>
 
-
 <div calss="center">APPE-8: UNMH Internal Medicine - Allison Burnett, PharmD</center>
 
 <div class="center">_January 16, 2016_</div>
-
 </script>
 </section>
 <section data-markdown>
@@ -137,9 +135,9 @@ Patients were stratified into groups according to antithrombotic treatment
 * Concomitant medicaitons used at baseline were determined using prescription fill history during the 90 day blanking peroid
 
 ### Comorbidities
-* **Stroke**: assessed using CHADS<sub>2</sub> and CHA<sub>2</sub>DS<sub>2</sub>-VASc scores
-    * **C**HF, **H**TN, **A**ge &ge; 75, **D**M, **S**troke or TIA (**V**ascular disease, **A**ge 65 to 74, **S**ex[F])
-* **Bleeding risk**: assessed using HAS-BLED
+* Stroke risk was assessed using CHADS<sub>2</sub> and CHA<sub>2</sub>DS<sub>2</sub>-VASc scores
+    * CHF, HTN, Age &ge; 75, DM, Stroke or TIA (Vascular disease, Age 65 to 74, Sex[F])
+* Bleeding risk was assessed using HAS-BLED
     * HTN, abnormal renal/liver function, stroke, previous bleed, INR, age &ge; 65, drugs (antiplatelet agents, NSAIDs) or EtOH abuse.
 </script>
 </section>
@@ -163,13 +161,11 @@ Patients were stratified into groups according to antithrombotic treatment
 <section data-markdown>
 <script type="text/template">
 ## Statistical analysis
-* Categorical data was used &chi;<sup>2</sup> test
-* Risk of events with 
-</script>
-</section>
-<section data-markdown>
-<script type="text/template">
-## Patient involvement
+* Baseline characteristics were represented using means and standard deviations
+* Independence/homogeneity was assessed using &chi;<sup><small>2</small></sup> tests
+* Cumulative incidence of outcomes was assessed using the Aalen-Johansen method
+* Time dependent Cox proportional hazards models were used to examine the risk of events during follow-up
+* Significance was determined using two-sided &alpha; of &lt; 0.05
 </script>
 </section>
 </section>
@@ -179,26 +175,44 @@ Patients were stratified into groups according to antithrombotic treatment
 # Results
 </script>
 </section>
-<section data-markdown>
-<script type="text/template">
-## Index study population
-
-![Enrollment diagram](flow.png)
-</script>
+<section data-background="flow.png">
 </section>
 <section data-markdown>
 <script type="text/template">
 ## Outcomes after index bleeding event
+| Outcome       | Cumulative indcidence (2yrs)|
+| --------------| ----------------------|
+| All cause mortality | 39.9% (38.4% to 41.3%, n=1745)         |
+| Thromboembolism     | 12.0% (11.0% to 13.0%, n=526)          |
+| Major bleeding      | 17.7% (16.5% to 18.8%, n=788)          |
+| Recurrent GI bleed  | 12.1% (11.1% to 13.1%, n=526)          |
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
 ## Baseline study population
+* 1,192 patients were excluded during the 90 day blanking peroid
+* Baseline population at 90 days post inclusion event consisted of 3,409 patients
+* Mean CHAD<sub><small>2</small></sub>DS<sub><small>2</small></sub>-VASc was 3.6 (SD 1.5)
+* Mean HAS-BLED was 3.0 (SD 1.0)
+
+| Therapy                                                            | Percent (n)    |
+| ------------------------------------------------------------------ | ---------------|
+| Single anticoagulant                                               | 21.3% (n=725)  |
+| Aspirin                                                            | 35.5% (n=1,212)|
+| P2Y<sub><small>12</small></sub> inhibitor                          | 3.0% (n=102)   |
+| Anticoagulant + Aspirin                                            | 10.7% (n=363)  |
+| Anticoagulant + P2Y<sub><small>12</small></sub> inhibitor          | 0.6% (n=21)    |
+| Aspirin + P2Y<sub><small>12</small></sub> inhibitor                | 1.5% (n=51)    |
+| Anticoagulant + Aspirin + P2Y<sub><small>12</small></sub> inibitor | 0.3% (n=11)    |
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
 ## Cumulative indices
+* Significant increase in all cause mortality at 5 years in non-resumption and single antiplatelet group
+![Cumulative incidence plot](cumplot.png)
+![Hazard ratios](hazards.png)
 </script>
 </section>
 <section data-markdown>
