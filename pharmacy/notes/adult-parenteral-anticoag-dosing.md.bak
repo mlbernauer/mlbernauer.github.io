@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="My name is Michael Bernauer, I'm a 4th year PharmD student at  the University of New Mexico College of Pharmacy. In addition to pharmacy, my interests include programming (R, Python, Julia, MySQL), machine learning, data analysis, health informatics, pharmacovigilance, and data mining.
+">
+  <meta name="keywords" content="bernauer, michael l bernauer, michael, UNM, pharmacy, informatics">
+  <title>Michael L. Bernauer</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../img/portrait_crop.png"/>
+  <link type="text/css" rel="stylesheet" media="all" href="../../css/reset.css"/>
+  <link type="text/css" rel="stylesheet" media="all" href="../../css/default.css"/>
+  <link type="text/css" rel="stylesheet" media="all" href="../../css/syntax.css"/>
+  <script type="text/javascript" src="../../js/smoothscroll.js">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'> 
+</head>
+
+<body>
+<div id="header">
+  <div class="transparent">
+    <div class="nav">
+      <ul>
+        <li><a href="http://mlbernauer.github.io/#home">Michael L. Bernauer</a></li>
+        <li><a href="http://mlbernauer.github.io/#about">About</a></li>
+        <li><a href="http://mlbernauer.github.io/#projects">Projects</a></li>
+        <li><a href="http://mlbernauer.github.io/assets/2015_bernauer_curriculum_vitae.pdf">Curriculum Vitae</a></li>
+        <li><a href="/pages/downloads">Downloads</a></li>
+        <li><a href="/pages/slides">Slides</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="page_container">
+  <div class="content">
+    <h1></h1>
+    <div class="deets">
+      <span class="date"></span>
+    </div>
+    # Adult parenteral anticoag dosing
+
+_Created 2016-01-10 by [Michael L. Bernauer](http://mlbernauer.com)_
+
+
+## VTE prophylaxis
+
+### High risk for clots
+* **hip/knee surgery**
+* **trauma**
+* **spinal cord injury**
+* Encourage use of enoxaparin over UFH in patients with CrCl > 30 mL/min and weight
+&gt; 50 kg due to **safety**, **efficacy**, **convenience** and **cost**
+
+| Agent |  Risk for clot  | Usual dose | CrCl < 30 ml/min | BMI > 40 | Wt < 50 kg | Epideural/spinal anasthesia |
+|:------|:------------|:----------------|:--------------|:-----------------|:---------|:-----------|:----------------------------|
+| Enoxaparin |  High (hip/knee surg, spinal/trauma) | 30mg SQ Q12 | Relatively contraindicated, may use 30mg SQ QD | 0.5mg/kg Q12 | 30 mg SC QD | Contraindicated |
+| Enoxaparin | Moderate risk | 40mg SQ QD |Relatively contraindicated, may use 30 mg SQ QD or UFH 5000 SQ Q8h | 0.5 mg/kg QD | 30 mg SQ QD or UFH 5000 units SQ Q8H | Allowed |
+| UFH | -- |  5000 units SQ Q8H or 5000 units SQ Q12 if spinal/epidural | No adjustment  | 7500 units SQ Q8H | No adjustment, may consider 5000 U SQ Q12 in extreme cases | Allowed |
+
+*  Measure Anti-Factor Xa **enoxaparin** + BMI > 40, Wt < 50kg, CrCl < 30 mL/min or pregnant
+* Do not use enoxaparin in overweight patients receiving spinal/epidural anasthesia unless receiving continuous peripheral nerve block.
+* **Fondaparinux** if Hx of HIT, pork allergy or religion
+
+## Therapeutic anticoag
+
+| Agent     | Indication        | Treatment dose        | CrCl < 30 ml/min |
+| ----------| ------------------| ----------------------| -----------------|
+|Enoxaparin | heart valve, NSTEMI/ACS | 1mg/kg SQ Q12H | Relatively contraindicated |
+|Enoxaparin | Afib, cardiacthrombus, VTE/PE | 1.5mg/kg SQ QD | 1mg/kg SQ QD or UFH per protocol |
+| UFH   | DVT/PE/Afib | HIHP or 330 units/kg + 250 units/kg SQ Q12 | None |
+| UFH | NSTEMP/ACS, Acute STEMI | LIHP | None |
+| UFH | Heart valve, cardiac thrombus | Non-weight based | None |
+
+* Enoxaparin preferred over UFH for acute VTE
+* Only use UFH if renal compromised or potential invasive procedure
+* High dose enoxaparin (1.5 mg/kg SQ QD) may result in spike in anticoagulant activity
+consider Q12 dosing in high bleed risk patients
+
+### Enoxaparin doseing
+* Large therapeutic window precludes monitoring
+* Can round to nearest syringe size (to nearest 10mg)
+* Available syringe sizes: 30mg, 40mg, 60mg, 80mg, 100mg, 120mg, 150mg
+* Consider rounding down if high bleed risk; consider rounding up in VTE/PT
+
+### UFH protocols
+ * Dosing based on **actual body weight**
+ * Bolus dose is recommended maximum starting dose but may be exceeded if necessary
+ * Bolus shortens onset of action
+ * Bolus is useful in patients who need rapid anticoagulation; may omit if high risk for bleed
+
+| Agent | Indication           | Rationale       | Bolus     | Infusion      | Monitoring |
+|-------|----------------------|-----------------|-----------|---------------|------------|
+| UFH   | DVT/PE  | Rapid/assertive AC to prevent extension of thrombus and emoblism | 80 U/kg | 18 U/kg/h | Hep-Xa |
+| UFH | ACS/Stroke | Less aggressive AC d/t antiplatelet therapy, post-thrombotic syndrome and hemorrhagic conversion | 60 U/kg | 12 U/kg/h | Hep-Xa
+|UFH | CT surgery, vascular surg | Prevent catheter-induced thromboembolism and thromboembolism during arterial and cardiac surgery | No bolus | 500-1000 U/hr | aPTT (55--85s)
+
+* Restrict **Fondaparinux** for treatment of patients with
+    * Suspected HIT
+    * History of HIT
+    * Pork allergy or religion
+    * Use in patients > 165kg that can afford it to facilitate single injection therapy
+
+## Thrombolytic therapy
+
+### PE with hypotension (SBP < 90 mmHg)
+
+* rt-PA 100 mg over 2 hours is most common/studid dose
+* Bolus is indicated in current or imminent cardiac arrest
+* Administer through peripheral veigh vs pulmonary artery catheter
+* Short infusion (2h) preferred over longer infusion (24h)
+* If possible; seek alternate intervention (CT surgy, vasc surg, interventional radiology)
+
+### Acute DVT
+
+* rt-PA per IR or CT recommendation
+* Catheter directed thrombolysis (CDT) preferred over systemic thrombolysis
+* Dosing:
+    * Infusion first technique
+        * Unilateral catheter: 1mg/hr
+        * Bilateral catheter: 0.5mg/hr
+    * Monitor fibrinogen q6h
+        * If fibrinogen < 150 reduce infusion by 50% and call attending
+        * If fibrinogen < 100 stop infusion and call attending
+        * Usual given with **heparin** 300-600 U/h (monitor aPTT)
+    * Single session (Trellis procedure i.e. pharmacomechanical)
+        * rt-PA 5-25mg/10mL
+* Patients that benefit from CDT
+    * Ileofemoral DVT
+    * Symptomes < 14 days
+    * Good functionl status
+    * Life expectancy > 1 yr
+    * Low bleed risk
+
+## Monitoring
+Pharmacists may order necessary labs
+ * Platelets (Heparin, enoxaparin): q3d to monitor for HIT
+ * Serum creatinine (enoxaparin, fondaparinux): baseline prior to dispensing
+    * May dispense single dose in emergency prior to SCr
+ * Anti-Factor Xa:
+    * In obesity (BMI > 40)
+    * Underweight (ABW < 50kg)
+    * Kidney disease (CrCl < 30 mL/min)
+    * Pregnancy
+ * Anti-Xa do not correlate with clinical outcomes; gross measure of over/under anticoagulation
+
+### Anti-Xa target levels
+
+|Agent | Timing of Anti-Xa draw | Treatment | Target level (IU/mL)|
+| ------| ----------------------| ----------|---------------------|
+| Enxoaparin | 3-4hr after 2nd or 3rd dose | 1mg/kg BID | 0.5-1|
+| Enoxaparin | 3-4hr after 2nd or 3rd dose | 1.5mg/kg QD | 1-2|
+| Enoxaparin | 3-4hr after 2nd or 3rd dose | 1mg/kg renal dose | 0.5-1.5|
+
+  </div>
+</div>
+<div>
+  <!--CONTACT-->
+<div id="contact">
+  <div class="beginning">
+    <h2>contact</h2>
+  </div>
+  <div class="wrap-one">
+    <div class="social">
+      <p class= "about">If you want to get in touch, email is probably best. But you have options.</p>
+      <a href="mailto:mlbernauer@gmail.com" class="mailicon" title="mail"></a>
+      <a href="http://twitter.com/mlbernauer" class="twittericon" title="twitter"></a>
+      <a href="http://www.facebook.com/mbernauer" class="facebookicon" title="facebook"></a>
+      <a href="https://github.com/mlbernauer" class="githubicon" title="github"></a>
+      <a href="https://www.flickr.com/photos/mlbernauer/" class="flickricon" title="flickr"></a>
+    </div>
+  </div>
+</div>
+
+  <!--FOOTER-->
+<div id="footer"></div>
+
+</div>
+</body>
+</html>
