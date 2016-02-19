@@ -23,7 +23,7 @@ body {
 
 .reveal {
   font-family: "Open Sans", sans-serif;
-  font-size: 36px;
+  font-size: 18px;
   font-weight: normal;
   color: #333; }
 
@@ -178,7 +178,7 @@ body {
 .reveal table th,
 .reveal table td {
   text-align: left;
-  padding: 0.2em 0.5em 0.2em 0.5em;
+  padding: 0.2em 0.2em 0.2em 0.2em;
   border-bottom: 1px solid; }
 
 .reveal table th[align="center"],
