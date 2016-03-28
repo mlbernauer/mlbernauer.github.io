@@ -52,8 +52,9 @@
 </section>
 <section data-markdown>
 <script type="text/template">
-## Definition (AMIA)
+## Definition
 
+### American Medical Informatics Association (AMIA)
 BMI is the interdisciplinary field that studies and pursues the effective 
 use of biomedical data, information, and knowledge for scientific inquiry, problem
 solving, and decision making, motivated by efforts to improve human health.
@@ -78,7 +79,7 @@ research.
 <script type="text/template">
 ## The Many Domains of BMI
 * **Clincial Informatics**: informatics applied to healthcare (nusring, pharmacy, dentistry, pathology) 
-* **Bioinformatics**: informatics in cellular/molecular biology (genomics, chemiformatics)
+* **Bioinformatics**: informatics in cellular/molecular biology, $1,000 genome era (genomics, chemiformatics)
 * **Imaging Informatics**: informatics as applied to imaging, storage and retrieval (radiology)
   * Computer vision/Image analysis and segmentation
 * **Consumer Health Informatics**:
@@ -114,6 +115,7 @@ Increasingly being used by clinicians as tool for assessing activity and mobilit
   * 83 hits for 'fitbit in [clincialtrials.gov](http://clinicaltrials.gov)
 
 <center><img src='fitbit.svg' width='400px' /></center>
+<small>http://clinicaltrials.gov</small>
 </script>
 </section>
 <section data-markdown>
@@ -125,6 +127,7 @@ Increasingly being used by clinicians as tool for assessing activity and mobilit
 * ImPACt scorecard for longitudinal assessment
 
 <center><img src='https://epactechnologies.com/img/front-page.jpg' width='500px'/></center>
+<small>http://epactechnologies.com</small>
 </script>
 </section>
 <section data-markdown>
@@ -157,38 +160,175 @@ Increasingly being used by clinicians as tool for assessing activity and mobilit
 <section data-markdown>
 <script type="text/template">
 # Consumer Health Informatics
-## (Direct-To-Consumer Genetics Testing)
+## (Direct-To-Consumer Genetic Testing)
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
-## 23andMe, deCODEme, FamilyTreeDNA
+## DTC SNP Genotyping
+
+### 23andMe, deCODEme, FamilyTreeDNA
 * Allow consumers to purchase SNP genotypes
 * Products include "carrier status" and "wellness" reports
 * Disease risk reports pending future FDA approval
-</script>
-</section>
-<section data-background-iframe="https://opensnp.org/statistics">
 
-</section>
-<section data-markdown>
-<script type="text/template">
-## $1,000 Genome Era
-<center><img src="https://www.genome.gov/images/content/costpergenome2015_4.jpg" width="800px"\></center>
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
-## OpenSNP background
+### OpenSNP
+* Open source repository consisting of DTC SNP data
+* Additionally collects phenotypic information
+* Fitbit API for integration of activity tracker data
 </script>
 </section>
 <section data-markdown>
 <script type="text/template">
-## OpenSNP stats page
+## OpenSNP
+
+<center><img src='open-snp-stats.png' width='700px'/></center>
+<small>https://opensnp.org/statistics</small>
 </script>
 </section>
+</section>
+<section>
+<section data-markdown>
+<script type="text/template">
+## Interests
+* **Data mining**: extraction of patterns and knowledge from large amounds of data. Considered to be a critical part of knowledge discovery in databases.
+  * FAERS, PubMed
+* **Machine Learning**: subfield of artificial intelligence (AI) concerned with algorithms that allow computers to learn.
+  * Can be broken in to supervised and unsupervised
+* **Natural Language Processing (NLP)**:
+  * Text summarization
+  * Information extraction
+  * Word embedding: word2vec
+    * Skip-gram
+    * Continuous Bag of Words (CBOW)
+  * Information retreival
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Machine Learning: Unsupervised
+Goal is to reveal natural structure or patterns within unlabeled, often high-dimensional data
+* **Cluster analysis**: Hierarchical, k-Means
+* **Principle Component Analysis (PCA)**
+* **Singular Value Decomposition (SVD)**
+* **Latent Semantic Analysis**
+* **Latent Dirichlet Allocation**
+* **Word Embedding**: skip-gram, CBOW
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Machine Leraning: Supervised
+Learned properties of the data are derived through training on labled training set. Predictions can then be made on unseen data.
+* **Regression methods**: prediction of continuous variable
+  * k-Nearest Neighbors
+  * Linear Regression
+  * Logistic Regression
+  * Artificial Neural Networks
+* Classification methods**: prediction of class lables/categories
+  * k-Nearest Neighbors
+  * Linear Discriminant Analysis
+  * Logistic Regression
+  * Support Vector Machines (SVM)
+  * Classification and Regression Trees
+  * Naive Bayes Classifier
+  * Artificial Neural Networks
+    * Shallow/Deep architecture
+</script>
+</section>
+</section>
+<section>
+<section data-markdown>
+<script type="text/template">
+# Projects
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Identification of MRSA PFGE Strain Type using Machine Learning
+### Background
+* PFGE is an electrohporetic molecular typing method used in epidemiologic surveillance of MRSA
+* Electrophoresis of restricted DNA results in characteristic fingerprint
+* Current methods of analysis (Gel Compar II) use hierarchical clustering based on pairwise similarity to classify organisms
+* Current methods require preprocessing and manual intervention (lane detection, preprocessing)
 
+### Objective
+* Study the feasability of using machine learning algorithms as alternatives to hierarchical clustering in determining
+PFGE strain type of methicillin-resistant Staphylococcus *aureus* isolates
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Identification of MRSA PFGE Strain Type using Machine Learning
+### Methods
+* 70 PFGE images were obtained containing ~ 20 fingerprints per image
+* Lanes were extracted using k-means clustering and normalized
+* Training set was created by applying PFGE class labels
+* Final training set contained 843 fingerprints
+* PCA was used as feature selection/dimensionality reduction of the fingerprint array
+* SVM was implemented using 10-fold cross validation
+* Grid search was used to select hyperparameters for kNN, RF and aNN
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Identification of MRSA PFGE Strain Type Machine Learning
+### Results
+* aNN and SVM performed best with overall classification accuracy of 90.0% and 88.5% respectively
+* kNN and RF performed similarly with accuracies of 86.1% and 86.9% respectively
+
+### Limitations
+* Big $p$, little $n$: may result in overfitting/high variance
+* Unbalance dataset (preponderace of USA300)
+
+### Conclusion
+Supervised learning algorithms such as SVM and aNN provide feasable alternatives to traditional hierarchical clustering methods. It is expected that accuracy
+will improve with more training data.
+</script>
+</section>
+</section>
+<section>
+<section data-markdown>
+<script type="text/template">
+## FDA Adverse Event Reporting System (FAERS)
+### Background
+* FAERS is a public databse containing information on adverse event and medication error reports submitted to FDA
+* Designed to support post-marketing saftey surveillance of drug and therapeutic biologic products
+* Reporting is voluntary by healthcare professionals and required by manufacturers
+* Evaluation of potential safety concern may result in updates to labeling information, restricted use of med, or product removal from market
+
+### Objective
+* Develop as set of open source tools mining adverse drug events using data from the FAERS
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## FDA Adverse Event Reporting System (FAERS)
+### Methods
+* Develop tools for normalizing drugnames ([drugstandards](https://github.com/mlbernauer/drugstandards))
+  * drugstandards works by creating a set a mappings from brand name to generic using [DrugBank](http://www.drugbank.ca/) (Wishart DS., et al. Nucleic Acids Res. 2006) and [ChEMBL](https://www.ebi.ac.uk/chembl/) (Bento AP., et al. Nucleic Acids Res. 2014)
+  * Jaro-Winkler similarity is used to handle misspellings and ranges from 0 to 1
+* Standard data mining algorithms were implemented (Proportional Reporting Ratio, Reporting Odds Ratio, Mult-item Gamma Poisson Shrinker)
+
+$$PRR = \frac{P(ae|drug)}{P(ae|-drug)}$$
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Adverse Event Matrix
+<center><img src="faers-mat.png" width='600px'/></center>
+
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## FDA Adverse Event Reporting System (FAERS)
+### Future Directions
+* Drug-drug interactions using association rules
+* Cluster analysis
+* Matrix factorization/"topic modeling"
+</script>
+</section>
 </section>
 
         </div>
