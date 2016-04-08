@@ -259,9 +259,9 @@ a.githubicon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 180px) {
+@media screen and (max-width: 1000px) {
   #footer {
-    width:480px;
+    width:1000px;
   }
 
   #home {
