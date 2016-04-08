@@ -127,6 +127,10 @@ h1
 #home {
  /* background: #6b98ae;*/
   background: #141b2e;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#141b2e));
+  background-image: -webkit-linear-gradient(top, transparent 0%,rgba(20, 27, 46, 0.5) 70%,rgba(20,27, 46, 0.9) 97%,#141b2e 100%);
+  background-image: -moz-linear-gradient(top, transparent 0%,rgba(20, 27, 46, 0.5) 70%,rgba(20,27, 46, 0.9) 97%,#141b2e 100%);
+  background-image: -ms-linear-gradient(top, transparent 0%,rgba(20, 27, 46, 0.5) 70%,rgba(20,27, 46, 0.9) 97%,#141b2e 100%);
   height: 530px;
   padding-top: 280px;
   width: 100%;
