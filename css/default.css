@@ -126,7 +126,7 @@ h1
 
 #home {
  /* background: #6b98ae;*/
-  background: url('./assets/pharmacy.jpg')
+  background: url('./assets/pharmacy.jpg');
   height: 530px;
   padding-top: 280px;
   width: 100%;
