@@ -258,8 +258,8 @@ a.githubicon:hover {
   height: 70px;
   margin: 0px auto;
 }
-/*
-@media screen and (max-width: 480px) {
+
+@media screen and (max-width: 180px) {
   #footer {
     width:480px;
   }
@@ -306,7 +306,7 @@ a.githubicon:hover {
   .doublegulp {
     width: 90%;
   }
-}*/
+}
 
 .page_container {
   width: 900px;
