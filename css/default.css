@@ -125,10 +125,10 @@ h1
 }
 
 #home {
- /* background: #6b98ae;*/
+  background: #6b98ae;
  /* background: #141b2e;*/
- background-image: url('../assets/pharmacy.png');
-/*  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#141b2e))  background-image: url('../assets/pharmacy.png');*/ 
+ /*background-image: url('../assets/pharmacy.png');*/
+ /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#141b2e))  background-image: url('../assets/pharmacy.png');*/ 
   height: 700px;
   padding-top: 430px;
   width: 100%;
