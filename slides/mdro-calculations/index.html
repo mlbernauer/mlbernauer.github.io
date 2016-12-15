@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MDRO Calculations</title>
+  <meta charset="utf-8">
+  <meta name="description" content="MDRO Calculations">
+  <meta name="author" content="Michael L. Bernauer">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>MDRO Calculations</h1>
+    <h2>Calculation of Antibiotic Weights and Risk Scores</h2>
+    <p>Michael L. Bernauer<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Resistance Scores</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Mother Score</h3>
+
+<ul>
+<li>Calculated using all 13 organisms in data set</li>
+<li>Excludes: Ampicillin, TMP/SMZ</li>
+</ul>
+
+<h3>Daughter Score 1</h3>
+
+<ul>
+<li>Calculated only using Acinetobacter and Enterobacteriaceae</li>
+<li>Exclude: Ampicillin, TMP/SMZ</li>
+</ul>
+
+<h3>Daughter Score 2</h3>
+
+<ul>
+<li>Calculated using only Pseudomonas</li>
+<li>Excludes: TMP/SMZ, Cefoxitin, Cefazolin, Ampicillin, Ceftriaxone, Ertapenem, Levofloxacin, Amp/Sulbactam</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Antibiotic Weights</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Calculation</h3>
+
+<p>Each antibiotic \(i\) is given as weight \(w_i\), according to the number of organisms that are <em>susceptible</em> to that antibiotic.
+Antibiotics that have higher proportions of susceptible organisms are given higher weight. Weights can take on values \(0 \le w_i \le 1\)</p>
+
+<p>\[w_i = \frac{1}{n} \sum_{j=1}^{n} S_{ij}\]</p>
+
+<p>Where \(n\) is the total number of species included in the scoring definition and \(S_{ij}\) is the proportion of organisms in species
+\(j\) that are susceptible to antibiotic \(i\) and calculated as follows</p>
+
+<p>\[S_{ij} = 1 - \frac{R_{ij}}{N_{j}}\]</p>
+
+<p>\(R_{ij}\) is the number of organisms in species \(j\) that are resistant to antibiotic \(i\) and \(N_j\) is the total number 
+of organism of species \(j\) (both susceptible and resistant). </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Resistance Scores</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Calculation</h3>
+
+<p>The restance score, \(Q_{k}\), is calculated for each organism \(k\) and is the weighted sum of antibiotics that the
+organism is resistant to and a can be expressed as</p>
+
+<p>\[Q_{k} = w_{1}X_{1k} + w_{2}X_{2k} + ... + w_iX_{ik}\]</p>
+
+<p>Where and \(X_i \in \{0,1\}\) depending on whether the organisms is susceptible or resistant to antibiotic \(i\). This can
+be show mor compactly as</p>
+
+<p>\[Q_k = \sum_{i=1}^{n}w_iX_{ik}\]</p>
+
+<p>Where \(n\) is the total number of antibiotics in the data set and \(k\) is the total number of organisms in the data set.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Resistance Scores'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Antibiotic Weights'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Resistance Scores'>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>

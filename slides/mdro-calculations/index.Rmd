@@ -1,0 +1,47 @@
+## Resistance Scores
+
+### Mother Score
+  * Calculated using all 13 organisms in data set
+  * Excludes: Ampicillin, TMP/SMZ
+
+### Daughter Score 1
+  * Calculated only using Acinetobacter and Enterobacteriaceae
+  * Exclude: Ampicillin, TMP/SMZ
+
+### Daughter Score 2
+  * Calculated using only Pseudomonas
+  * Excludes: TMP/SMZ, Cefoxitin, Cefazolin, Ampicillin, Ceftriaxone, Ertapenem, Levofloxacin, Amp/Sulbactam
+
+---
+
+## Antibiotic Weights
+
+### Calculation
+Each antibiotic $i$ is given as weight $w_i$, according to the number of organisms that are *susceptible* to that antibiotic.
+Antibiotics that have higher proportions of susceptible organisms are given higher weight. Weights can take on values $0 \le w_i \le 1$
+
+$$w_i = \frac{1}{n} \sum_{j=1}^{n} S_{ij}$$
+
+
+Where $n$ is the total number of species included in the scoring definition and $S_{ij}$ is the proportion of organisms in species
+$j$ that are susceptible to antibiotic $i$ and calculated as follows
+
+$$S_{ij} = 1 - \frac{R_{ij}}{N_{j}}$$
+
+$R_{ij}$ is the number of organisms in species $j$ that are resistant to antibiotic $i$ and $N_j$ is the total number 
+of organism of species $j$ (both susceptible and resistant). 
+
+---
+## Resistance Scores
+### Calculation
+The restance score, $Q_{k}$, is calculated for each organism $k$ and is the weighted sum of antibiotics that the
+organism is resistant to and a can be expressed as
+
+$$Q_{k} = w_{1}X_{1k} + w_{2}X_{2k} + ... + w_iX_{ik}$$
+
+Where and $X_i \in \{0,1\}$ depending on whether the organisms is susceptible or resistant to antibiotic $i$. This can
+be show more compactly as
+
+$$Q_k = \sum_{i=1}^{n}w_iX_{ik}$$
+
+Where $n$ is the total number of antibiotics in the data set and $k$ is the total number of organisms in the data set.
