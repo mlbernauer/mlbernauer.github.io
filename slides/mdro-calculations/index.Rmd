@@ -6,7 +6,7 @@
 
 ### Daughter Score 1
   * Calculated only using Acinetobacter and Enterobacteriaceae
-  * Exclude: Ampicillin, TMP/SMZ
+  * Excludes: Ampicillin, TMP/SMZ
 
 ### Daughter Score 2
   * Calculated using only Pseudomonas
@@ -17,18 +17,16 @@
 ## Antibiotic Weights
 
 ### Calculation
-Each antibiotic $i$ is given as weight $w_i$, according to the number of organisms that are *susceptible* to that antibiotic.
-Antibiotics that have higher proportions of susceptible organisms are given higher weight. Weights can take on values $0 \le w_i \le 1$
+Each antibiotic $i$ is given a weight $w_i$, according to the number of organisms that are *susceptible* to that antibiotic.
+Antibiotics with lower rates of resistance (higher susceptibility rate) are given higher weights. Weights can take on values $0 \le w_i \le 1$
 
 $$w_i = \frac{1}{n} \sum_{j=1}^{n} S_{ij}$$
 
-
-Where $n$ is the total number of species included in the scoring definition and $S_{ij}$ is the proportion of organisms in species
-$j$ that are susceptible to antibiotic $i$ and calculated as follows
+Where $n$ is the total number of species included in the scoring definition and $S_{ij}$ is the proportion of susceptible organisms for antibiotic $i$ and species $j$
 
 $$S_{ij} = 1 - \frac{R_{ij}}{N_{j}}$$
 
-$R_{ij}$ is the number of organisms in species $j$ that are resistant to antibiotic $i$ and $N_j$ is the total number 
+$R_{ij}$ is the number of organisms of species $j$ that are resistant to antibiotic $i$ and $N_j$ is the total number 
 of organism of species $j$ (both susceptible and resistant). 
 
 ---

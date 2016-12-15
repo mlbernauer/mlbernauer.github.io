@@ -57,7 +57,7 @@
 
 <ul>
 <li>Calculated only using Acinetobacter and Enterobacteriaceae</li>
-<li>Exclude: Ampicillin, TMP/SMZ</li>
+<li>Excludes: Ampicillin, TMP/SMZ</li>
 </ul>
 
 <h3>Daughter Score 2</h3>
@@ -78,17 +78,16 @@
   <article data-timings="">
     <h3>Calculation</h3>
 
-<p>Each antibiotic \(i\) is given as weight \(w_i\), according to the number of organisms that are <em>susceptible</em> to that antibiotic.
-Antibiotics that have higher proportions of susceptible organisms are given higher weight. Weights can take on values \(0 \le w_i \le 1\)</p>
+<p>Each antibiotic \(i\) is given a weight \(w_i\), according to the number of organisms that are <em>susceptible</em> to that antibiotic.
+Antibiotics with lower rates of resistance (higher susceptibility rate) are given higher weights. Weights can take on values \(0 \le w_i \le 1\)</p>
 
 <p>\[w_i = \frac{1}{n} \sum_{j=1}^{n} S_{ij}\]</p>
 
-<p>Where \(n\) is the total number of species included in the scoring definition and \(S_{ij}\) is the proportion of organisms in species
-\(j\) that are susceptible to antibiotic \(i\) and calculated as follows</p>
+<p>Where \(n\) is the total number of species included in the scoring definition and \(S_{ij}\) is the proportion of susceptible organisms for antibiotic \(i\) and species \(j\)</p>
 
 <p>\[S_{ij} = 1 - \frac{R_{ij}}{N_{j}}\]</p>
 
-<p>\(R_{ij}\) is the number of organisms in species \(j\) that are resistant to antibiotic \(i\) and \(N_j\) is the total number 
+<p>\(R_{ij}\) is the number of organisms of species \(j\) that are resistant to antibiotic \(i\) and \(N_j\) is the total number 
 of organism of species \(j\) (both susceptible and resistant). </p>
 
   </article>
