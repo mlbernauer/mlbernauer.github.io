@@ -32,7 +32,7 @@ of organism of species $j$ (both susceptible and resistant).
 ---
 ## Resistance Scores
 ### Calculation
-The restance score, $Q_{k}$, is calculated for each organism $k$ and is the weighted sum of antibiotics that the
+The resistance score, $Q_{k}$, is calculated for each organism $k$ and is the weighted sum of antibiotics that the
 organism is resistant to and a can be expressed as
 
 $$Q_{k} = w_{1}X_{1k} + w_{2}X_{2k} + ... + w_iX_{ik}$$
