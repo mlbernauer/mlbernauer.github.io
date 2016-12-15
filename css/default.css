@@ -126,11 +126,8 @@ h1
 
 #home {
   background: #6b98ae;
- /* background: #141b2e;*/
- /*background-image: url('../assets/pharmacy.png');*/
- /*background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#141b2e))  background-image: url('../assets/pharmacy.png');*/ 
-  height: 700px;
-  padding-top: 430px;
+  height: 530px;
+  padding-top: 280px;
   width: 100%;
 }
 
@@ -259,9 +256,9 @@ a.githubicon:hover {
   margin: 0px auto;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 480px) {
   #footer {
-    width:1000px;
+    width:480px;
   }
 
   #home {
