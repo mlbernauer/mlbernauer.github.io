@@ -1,0 +1,138 @@
+## Logistic Regression
+In this exercise we will build a logistic regression model to predict
+whether a student gets admitted into a university.
+
+Suppose that you are the administrator of a university department and you want
+to determine each applicant's chance of admission based on their results of two
+exams. You have historical data from previous applicants that you can use as a training
+set for logistic regression. For each training example, you have the applicant's scores
+on two exams and the admission decision.
+
+Your task is to build a classification model that estimates an applicants probability of admission
+based on the scores from those two exams.
+
+## Exploring the data
+Before starting to implement any learning algorithm, it is always good to visualize the data if possible.
+```{r}
+library(ggplot2)
+test_scores <- read.csv("./data/ex2data1.txt", header=FALSE)
+p <- ggplot(test_scores, aes(x=V1, y=V2, colour=factor(V3))) + geom_point() + 
+  labs(title="Admission based on test scores") + ylab("Exam 2") + xlab("Exam 1")
+p
+```
+
+## Implementation
+The logistic regression hypothesis function is defined as
+$$h_{\theta}(x) = g(\theta^{T}x)$$
+
+where $g$ is the sigmoid function, defined as
+$$g(z) = \frac{1}{1 + e^{-z}}$$
+
+### Sigmoid function
+```{r}
+sigmoid_function <- function(z){
+  sigmoid <- 1 / (1 +exp(-z))
+  return(sigmoid)
+}
+
+# Evaluating sigmoid(0) should give you exactly 0.5
+sigmoid_function(0)
+```
+
+### Cost function and gradient
+Recall that the cost function in logistic regression is
+$$ J(\theta) = \frac{1}{m} \sum_{i=1}^{m}[-y^{(i)}log(h_{\theta}(x^{(i)})) - (1 - y^{(i)})log(1-h_{\theta}(x^{(i)}))]$$
+
+and the gradient for the cost is a vector of the same length as $\theta$ where the j<sup>th</sup> element (for j=0,1,...,n)
+is defined as follows:
+$$\frac{\partial J(\theta)}{\partial \theta_{j}} = \frac{1}{m} \sum_{i=1}^{m}(h_{\theta}(x^{(i)}) - y^{(i)})x^{(i)}_{j}$$
+
+```{r}
+# Cost function
+cost_function <- function(X, y, theta){
+  hx <- sigmoid_function( X %*% theta)
+  m <- dim(X)[1]
+  J <- (1/m) * sum(-y * log(hx) - (1-y)*log(1 - hx))
+  return(J)
+}
+```
+Test the `cost_function` implementation. Using $\theta$ values of [0, 0, 0], the `cost_function` if implemented
+correctly should return 0.693
+
+```{r}
+# Test the cost function implementation
+X <- as.matrix(test_scores[,-3])
+X <- cbind(rep(1, dim(X)[1]), X)
+m <- dim(X)[1]
+n <- dim(X)[2]
+y <- as.matrix(test_scores[,3])
+theta <- matrix(0, nrow=n, ncol=1)
+
+cost_function(X, y, theta)
+```
+
+### Optimization with Gradient Descent
+We will use gradient descent to find $\theta$ parameters that optimized $J(\theta)$
+```{r}
+# Gradient descent algorithm
+gradient_descent <- function(X, y, theta, iters=1e4, alpha=0.0001){
+  J <- rep(NA, iters)
+  for(i in 1:iters){
+    hx <- sigmoid_function( X %*% theta)
+    theta <- theta - alpha * (1/m) * t(t(hx - y) %*% X)
+    J[i] <- cost_function(X, y, theta)
+  }
+  return(list(cost_hist=J, params=theta))
+}
+```
+Now lets test the optimization using gradient descent. For this dataset, if the cost function converges completely you should
+see a total cost of about 0.203.
+```{r}
+fit <- gradient_descent(X, y, theta, alpha=0.001, iters=1e6)
+qplot(1:length(fit$cost_hist), fit$cost_hist, geom="line", main="Cost function", ylab="Cost", xlab="Iteration")
+```
+
+From the plot above, we see that the function does not converge completely, however we do see that there appears to be
+a lower limit somewhere around 0.2 as expected. Our learned parameters that minimze the cost function are returned in the
+`fit` object and are found to be `r fit$params`.
+
+### Plot decision boundary
+Now that we have learned the $\theta$ parameters that minimize the cost function $J(\theta)$ we can use 
+them to make predictions given two exam scores. Also, we can now use the $\theta$ parameters to observe the
+decision boundary by making admission predictions for every possible test score combination. Below, we loop
+through every possible test score and make a prediction, we can then plot the points for each test score and
+color code them using the results from our prediction.
+```{r}
+data_max <- apply(X[,-1], 2, max)
+data_min <- apply(X[,-1], 2, min)
+decision_boundary <- data.frame(x=NA, y=NA, admission=NA)
+count <- 1
+for(i in seq(from=data_min[1], to=data_max[1], length.out=100)){
+  for(j in seq(from=data_min[2], to=data_max[2], length.out=100)){
+    data_row <- c(i, j, round(sigmoid_function(c(1,i,j) %*% fit$params)))
+    decision_boundary[count, ] <- data_row
+    count <- count + 1
+  }
+}
+p <- ggplot(decision_boundary) + geom_point(aes(x=x, y=y,colour=factor(admission)), alpha=0.15) + 
+  geom_point(data = test_scores, aes(x=V1, y=V2, colour=factor(V3))) + labs(title="Decision boundary") +
+  ylab("Exam 2") + xlab("Exam 1")
+
+p
+```
+
+We can see that decision boundary appropriately separates the admitted students from the non-admittted students.
+
+### Logistic regression using R-base
+There are build in ways for learning logistic regression parameters. The `glm` function allows
+linear regression analysis by specifying `family='binomial'`
+```{r}
+# Logistic regression using GLM 
+fit2 <- glm(V3 ~ V1 + V2, data = test_scores, family = "binomial")
+coef(fit2)
+
+# Logistic regression using self-implemented gradient descent
+fit$params
+```
+
+

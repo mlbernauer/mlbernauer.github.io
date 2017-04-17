@@ -1,0 +1,48 @@
+## Creating a Bar Graph
+In this example we will create a bar graph to show results from the past three decades of Nathan's
+Hot Dog Eating Contest.
+
+## Read in the data
+First we must read in the data. Lucky for us Nathan Yau has provided us with a nicely formatted database.
+```{r}
+hotdogs <- read.csv("http://datasets.flowingdata.com/hot-dog-contest-winners.csv", sep=",", header=TRUE)
+head(hotdogs)
+```
+
+## Designing the plot using R-base graphics
+We are interested in showing the number of HDBs eaten over time. To acheive this, we will plot the number of HDBs eaten
+by the winner for each year.
+```{r}
+colors <- ifelse(hotdogs$New.record == 1, "darkred", "grey")
+barplot(hotdogs$Dogs.eaten, names.arg = hotdogs$Year, col=colors, border=NA,
+        main = "Nathan's Hot Dog Eating Contest Results, 1980-2010", 
+        xlab="Year", ylab="Hot dogs and buns (HDBs) eaten")
+```
+
+## Designing the plot using ggplot2 graphics
+Now let's try to create the same figure using `ggplot2`.
+```{r}
+library(ggplot2)
+ggplot(hotdogs) + geom_bar(aes(x=Year, y=Dogs.eaten, fill=factor(New.record)), stat="identity") + 
+  labs(title="Nathan's Hot Dog Eating Contest Results, 1980-2010", fill="New Record") + xlab("Year") + 
+  ylab("Hot dogs and buns (HDBs) eaten")
+```
+
+## Stacked bar plot using R-base graphics
+Instead of viewing the number of HDBs eaten by the top contestant for each year we can view the top three.
+```{r}
+# Read in the data, each row is a different contestant
+hotdog_places <- read.csv("http://datasets.flowingdata.com/hot-dog-places.csv", sep=",", header=TRUE)
+# Convert to matrix
+hotdog_places <- as.matrix(hotdog_places)
+# Rename the columns to correspond to the years 2000-2010
+colnames(hotdog_places) <- lapply(2000:2010, as.character)
+barplot(hotdog_places, border=NA, main="Hot Dog Eating Contest Results, 1980-2010", xlab="Year",
+        ylab="Hot dogs and buns (HDBs) eaten")
+```
+
+
+## Results
+Throughout the 1990s, the winners ate 10-20 hot dogs and buns (HDBs) in about 15 minutes. However, in 2001, Takeru Kobayashi, a
+professional eater from Japan, obliterated the competition by eating 50 HDBs. That was more than twice the amount anyone in the
+world had eaten before him.

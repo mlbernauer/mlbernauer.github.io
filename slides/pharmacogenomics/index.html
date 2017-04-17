@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Michael L. Bernauer</title>
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Michael L. Bernauer">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+        <link rel="stylesheet" href="../reveal/css/reveal.css">
+        <link rel="stylesheet" href="../reveal/css/theme/serif.css" id="theme">
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal/css/print/pdf.css' : '../reveal/css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+<section data-markdown>
+<script type="text/template">
+# Pharmacogenomics
+
+<div class="center">_Created by [Michael L. Bernauer](http://mlbernauer.com/)_</div>
+<div class="center">_PharmD Candidate 2016i_</div>
+<div class="center">_University of New Mexico College of Pharmacy_</div>
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Pharmacogenomics
+* Employs tools for assessing genetic determinants of drug response
+* Historically a phenotype-to-genotype approach was taken
+* Now, with genomics, we can take a reverse; genotype-to-phenotype approach
+in which polymorphisms serve as the starting point
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Importance of Pharmacogenomics
+* Individuals response to a drug depends on complex interplay between environmental factors
+and genetic factors
+* For monogenic traits (G6DP, CYP2D6, TPMT), its often possible to predict
+phenotype from genotype
+* Prospective genotype determinations may result in the ability to prevent ADRs
+* Defining multigenic contributors to drug response is much more challenging
+* Multigenic phenotypes with large number of candidate genes require large sample size
+to produce sufficient statistical power to solve the 'multigenic' problem
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Basics of Pharmacogenomics
+* **Autosomal:** trait/allele that is located on autosome (i.e. not sex-linked)
+* **Recessive:** phenotype only expressed if individual is homozygous for nonfunctional allele; will not present in heterozygotes
+* **Co-dominant:** phenotype will present as intermediate if individual is heterozygous for nonfunctional allele
+* **Dominant:** this trait will present phenotypically in both heterozygous or homozygous individuals
+* Even within a single gene, a vast array of polymorphisms may exist (promoter, coding, noncoding, completely inactivating, modestly modifying)
+* Each polymorphism may deferentially affect a measured trait
+* A polymorphism with modest effect will only be observed in homozygous individuals
+* A polymorphism with complete loss of function will have large effect and may be observed in heterozygotes
+* Most traits are multigenic, not monogenic thus it is difficult to tell exactly how a given gene polymorphism will
+influence the phenotypic trait
+</script>
+</section>
+<section>
+<section data-markdown>
+<script type="text/template">
+## Types of gene variants
+* Polymorphism: variation in DNA sequence present in more than 1% of the population
+* Two major types of sequence variation exist:
+    * Single nucleotide polymorphisms (SNPs)
+    * Insertion/deletions (indels)
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## SNPs
+* A single point mutation in which one nucleotide (ATCG) is substituted for another
+* Occurs in >1% of population are SNPs
+* May exist in coding regions (exons) or noncoding regions (introns, promoters)
+* **Non-synonymous (missense):** result in amino acid substitutions
+* **Synonymous (sense):** preserve amino acid sequence (wobble codons)
+* **Nonsense:** result in early termination via introduction of stop codon
+* Some synonymous polymorphism have been associated with alterations in phenotype; i.e. ABCB1 C3435T has
+is synonymous but the new codon is translated at slower rate altering folding of final protein
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Indels
+* Involves the insertion or deletion of bases
+* Short repeats in promoter can alter expression levels
+* May result in addition or subtraction of amino acids in protein
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Copy number variations (CNV)
+* CNVs may cause gene duplication which increase that genes expression
+* May cause deletions resulting in absence of gene expression
+* Observed in TPMT, ABCB1, CYP450s, CBS, UGT, GST
+</script>
+</section>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Haplotypes
+* Defined as a series of alleles found at a linked locus on a chromosome
+* Individuals have two haplotypes for each gene; one maternal and one paternal
+* Haplotypes represent the constellation of variations that occur together for the gene on each
+chromosome
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Linkage Equilibrium/Disequilibrium
+* Linkage equilibrium: genotype at one locus is independent of genotype at second locus
+* Linkage disequilibrium: genotypes at two locus are not independent of one another
+* Complete linkage disequilibrium: genotypes at two loci always occur together
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Haploview
+<div class="center">![Haploview](http://openi.nlm.nih.gov/imgs/512/30/3338756/3338756_pone.0034741.g003.png)</div>
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Ethnic Diversity
+* Cosmopolitan polymorphisms are those polymorphisms present in all ethnic groups
+* Population (race/ethnic) specific polymorphisms are consistent with geographical isolation of human populations and are often neutral (no advantage
+or disadvantage)
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Monogenic vs. Multigenic
+* Population frequency distribution of monogenic traits may be trimodal with relatively distinct separation among low, intermediate, and high
+activity individuals
+* Population frequency distribution for multigenic traits is unimodal-skewed with no distinct differences among groups
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+# Databases
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+| Name | URL | Description |
+| --- | --- | --- |
+| PharmGKB | [www.pharmgkb.org](www.pharmgkb.org) | Genotype and phenotype data related to drug response |
+| EntrezSNP | [www.ncbi.nlm.nih.gov/SNP](www.ncbi.nlm.nig.gov) | SNPs and frequencies |
+| HGVbase | [www.hgvbaseg2p.org](www.hgvbaseg2p.org) | Genotype/phenotype associations |
+| HuGE Navigator | [www.hugenavigator.net](www.hugenavigator.net) | Literature annotations for genotype/phenotype associations |
+| OMIM | [www.ncbi.nlm.nih.gov/sites/entrez/?db=OMIM](www.ncbi.nlm.nih.gov/sites/entrez/?db=OMIM) | Human genes and genetic disorders |
+| HapMap | [www.hapmap.org](www.hapmap.org) | Genotypes, frequency, linkage data for variants |
+| UCSC Genome Browswer | [http://genome.ucsc.edu](http://genome.ucsc.edu) | Sequence of the human genome; variant alleles |
+| Novartis | [http://symatlas.gnf.org/SymAtlas/](http://symatlas.gnf.org/SymAtlas/) | Gene expression data for human genes |
+| Broad Institute Software | [link](http://www.broad.mit.edu.libproxy.unm.edu/science/software/science/software/software) | Software tools for the analysis of genetic studies |
+</script>
+</section>
+<section data-background-iframe="http://www.ebi.ac.uk/gwas/docs/downloads">
+</section>
+<section data-markdown>
+<script type="text/template">
+# Pharmacogenetic Phenotypes
+Candidate genes for therapeutic and adverse response can be divided into three categories: _pharmacokinetic_, _receptor/target_, and _disease modifying_.
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Pharmacokinetic phenotypes
+* 15-25% of all medicines in use have been shown to be substrates for CYP2D6
+* Seven variant alleles account for well over 90% of the 'poor metabolizer' low-activity alleles for this gene
+* Some individuals carry stable duplications of CYP2D6; 'ultra-rapid' metabolizers have up to 13 copies
+* Deficient CYP2D6 phenotype results in antidepressant/antipsychotic toxicity (catabolized by enzyme), lack of analgesic effect of codeine, lack of active tamoxifen
+</script>
+</section>
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Genes of Drug Metabolism and Transport
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Drug Metabolism and Transport
+| Gene | Drugs | Response affected |
+| --- | --- | --- |
+| CYP2C9 | Tolbutamide, warfarin, phenytoin, NSAIDs | Anticoagulant effect of warfarin | 
+| CYP2C19 | Omeprazole, propranolol, phenytoin, clopidogrel | Peptic ulcer response of omeprazole; Cardiovascular events after clopidogrel |
+| CYP2D6 | Atomoxetine, dextromethorphan, fluoxetine, tamoxifen | tardive dyskinesia from antipsychotics, narcotic SEs, codeine efficacy |
+| CYP3A4/3A5/3A7 | Macrolides, cyclosporine, tacrolimus, CCBs, midazolam, lidocaine | Efficacy of immunosuppressive effects of tacrolimus |
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Drug Metabolism and Transport cont 
+| Gene | Drugs | Response affected |
+| --- | --- | --- |
+| GSTM1, GSTT1, GSTP1 | Several anticancer agents | Decrease response in breast cancer, more toxicity |
+| TPMT | Mercaptopurine, thioguanine, azathioprine | Thiopurine toxicity and efficacy |
+| UGT1A1 | Irinotecal | Irinotecan toxicity |
+| ABCB1 | HIV protease inhibitors, digoxin | Decreased CD4 response, decreased digoxin AUC |
+| UGT2B7 | Morphine | Morphine plasma level |
+| SLC01B1 | Statins, methotrexate, ACEIs | Statin plasma levels, mypoathy; methotrexate levels, mucositis |
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Drug metabolism and transport cont
+| Gene | Drugs | Response affected |
+| --- | --- | --- |
+| SLC22A1 | Metformin | Pharmacologic effect and PK |
+| SLC22A2 | Metformin | Renal clearance | 
+| SLC22A4 | Gabapentin | Renal clearance |
+| CYP2B6 | cyclophosphamide | Ovarian failure |
+</script>
+</section>
+</section>
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Genes of Targets and Receptors
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Targets and receptors
+| Gene | Drugs | Response affected|
+| --- | --- | --- |
+| ACE | ACEIs | Reno-protective effects, hypotension, cough |
+| Thymidylate synthase | 5-FU | Colorectal cancer response |
+| CCR5 | Antiretrovirals, interferon | Antiviral response |
+| &Beta;<sub>2</sub> receptor (ADBR2) | &Beta;<sub>2</sub> blockers | Bronchodilation |
+| &Beta;<sub>1</sub> receptor (ADBR1) | &Beta;<sub>1</sub> blockers | BP, HR after &Beta;<sub>1</sub> blocker |
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Targets and receptors
+| Gene | Drug | Response affected |
+| --- | --- | --- |
+| 5-lipoxygenase (ALOX5) | Leukotriene receptor antagonists | Asthma response |
+| Dopamaine receptors (D<sub>2</sub>, D<sub>3</sub>, D<sub>4</sub>) | Haldoperidol, clozapine, thioridazine) | Antipsychotic response (D2, D3, D4), antipsychotic-induced tardive dyskinesia (D3), hyperprolactinemia in females (D2) |
+| Serotonin receptor (5-HT<sub>2A</sub>) | Antipsychotics | Clozapine antipsychotic response , paroxetine antidepressant response |
+</script>
+</section>
+
+
+
+</section>
+<section data-markdown>
+<script type="text/template">
+## CYP2D6 alleles
+
+| Description  | Genotype |
+| --- | --- |
+| Inactive alleles | CYP2D6\*3-\*8, \*11-\*16, \*19-\*21, \*38, \*40, \*42 |
+| Decreased activity alleles | CYP2DD6\*9, \*10, \*17, \*29, \*36, \*41 |
+| Active alleles | CYP2D6\*1, \*2, \*33, \*35 |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## CYP2C19 alleles
+
+|Description | Genotype |
+| --- | --- |
+| Gain of function allele | CYP2C19\*17 |
+| Functional allele | CYP2C19\*1
+| Loss of function allele | CYP2C19\*2,\*3 |
+</script>
+</section>
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Typical Antipsychotics
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Chlorpromazine
+* **Mechanism of action:** antagonize 5HT<sub>2A</sub> (antipsychotic), D<sub>2</sub> (antipsychotic), &alpha;<sub>1</sub> (blood pressure), ACh (sedation/decreased secretions), H<sub>1</sub> (sedation/allergy)
+* **Site of action:** D2 in the limbic system and basal ganglia
+* **Therapeutic use:** antiemetic, intractable hiccups, sedative, antipsychotics
+* **ADRs:** decreased seizure threshold, postural hypotension, anticholinergic effects, potentate CNS, hyperprolactinemia, Neuroleptic malignant syndrome
+* **Metabolism:** CYP2D6 (major pathway), CYP1A2, CYP3A4
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Haloperidol
+* **SNP recommendations:** Reduce haloperidol dose b 50% or select an alternative agent for CYP2D6 poor metabolizers
+
+| Phenotype | Recommendation | Evidence |
+| --- | --- | --- |
+| PM | Reduce dose by 50% or select alternate (quetiapine, olanzapine, clozapine) | Published clinical studies |
+| IM | None | Published clinical studies |
+| UM | Insufficient data | Insufficient data |
+</script>
+</section>
+</section>
+
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Atypical Antipsychotics
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Risperidone
+* **Mechanism of action:** D2 receptor antagonism, 5HT<sub>2A</sub> antagonist
+* **Site of action:** mesolimbic system of the brain
+* **Therapeutic use:** schizophrenia, bipolar disorder, autism
+* **ADRs:** moderate wight gain, moderate DM risk, moderate dyslipidemia
+* **SNP recommendations:** select alternative drug or be vigilant of ADRs in CYP2D6 poor metabolizers, intermediate metabolizers, or ultra-rapid metabolizers.
+
+| Phenotype | Recommendation | Evidence |
+| --- | --- | --- |
+| PM | Insufficient data | Insufficient data |
+| IM | Insufficient data | Insufficient data |
+| UM | Insufficient data | Insufficient data |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Aripiprazole
+* **Mechanism of action:** D2 partial agonist, 5HT<sub>1A</sub> partial agonist, 5HT<sub>2A</sub> antagonist
+* **Site of action:** mesolimbic system of the brain
+* **Therapeutic use:** Schizophrenia, bipolar disorder, depression, autism
+* **ADRs:** Low to no weight gain, no diabetes risk, no dyslipidemia
+* **SNP recommendations:** reduce maximum dose for CYP2D6 poor metabolizers
+
+| Phenotype | Recommendations | Evidence |
+| --- | --- | --- |
+| PM | Reduce max dose to 10 mg/day (67% of max rec. dose) | Published clinical studies |
+| IM | No recommendation | Published controlled studies |
+| UM | No recommendations | d |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Quetiapine
+* **Mechanism of action:** Weak D<sub>2</sub> antagonism and 5HT<sub>2A</sub> antagonism
+* **Site of action:** Mesolimbic system of the brain
+* **Therapeutic use:** Schizophrenia, bipolar disorder, acute depression, mania
+* **ADRs:** Moderate weight gain, moderate DM risk, moderate dyslipidemia
+* **SNP Dosing recommendations:** No dosing guidelines
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Clozapine
+* **Mechanism of action:** High affinity for D1, D4, 5HT<sub>2</sub>, muscarinic, &alpha;-adrenergic; low D2
+* **Site of action:** Mesolimbic system
+* **Therapeutic use:** Schizophrenia, schizoaffective disorder
+* **ADRs:** High weight gain, high DM, high dyslipidemia
+* **SNP mediated ADRs:** rs5443, Guanine nucleotide binding protein (GNB3); more weight gain with at least rs5443(c) allele
+
+| Phenotype | Recommendations | Evidence |
+| --- | --- | --- |
+| PM | No recommendations | Published clinical studies |
+| IM | No recommendations | Published clinical studies |
+| UM | No recommendations | Published clinical studies |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Olanzapine
+* **Mechanisms of action:** D2 antagonism > 5HT<sub>2A</sub>
+* **Site of action:** Mesolimbic system
+* **Therapeutic use:** schizophrenia, bipolar disorder, depression
+* **ADRs:** High weight gain, high DM risk, high dyslipidemia
+</script>
+</section>
+</section>
+
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Tricyclic Antidepressants
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Amitriptyline
+
+* **SNP recommendations:** CPIC doing guidelines recommends alternative drug for CYP2D6 or CYP2C19 ultra-rapid
+metabolizers and CYP2D6 poor metabolizers. 50% dose reduction for CYP2C19 poor metabolizers and 25% reduction for CYP2D6 intermediate metabolizers
+
+|Phenotype | CYP2D6 Genotype | Implication | Recommendation | Evidence |
+| --- | --- | --- | --- | --- |
+| UM | duplicate functional alleles | Increased metabolism | Avoid TCA due to lack of efficacy, may increase starting dose | Strong |
+| EM | fxn/fxn, reduced fxn/reduced fxn, full fxn/reduced fxn, full fxn/null | Normal metabolism | Initiate therapy at recommended starting dose | Strong |
+| IM | reduced fxn/null | Reduced metabolism | Consider 25% reduction in starting dose | Moderate |
+| PM | null/null | Greatly reduced metabolism of TCA, increased ADRs | Avoid TCAs; consider 50% reduction in starting dose | Strong |
+</script>
+</section>
+<section data-markdown>
+<script type="text/template">
+## Amitriptyline CYP2C19
+
+| Phenotype | CYP2C19 Genotype | Implication | Recommendation | Evidence |
+| --- | --- | --- | --- | --- |
+| UM | two gain of fxn alleles, one fxn/one gain of fxn | Increased metabolism | Consider alternate agent; if TCA is warranted monitor | Optional |
+| EM | two functional alleles | Normal metabolism | Initiate at recommended dosing | Strong |
+| IM | fxn/loss of fxn | Reduced metabolism | Initiate at recommended dosing | Strong |
+| PM | loss of fxn/loss of fxn | Greatly reduced metabolism | Consider 50% dose reduction | Moderate |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Clomipramine
+* **SNP recommendations:** consider 50% dose reduction for CYP2C19 poor metabolizers and 25% dose reduction of CYP2D6 intermediate metabolizers
+
+| Phenotype | CYP2D6 Genotype | Recommendation | Evidence |
+| --- | --- | --- | --- |
+| PM | two inactive alleles | Reduce dose by 50% and monitor plasma concentration | Published controlled studies |
+| IM | two decreased activity, active/inactive, decreased/inactive | Insufficient data | Insufficient data |
+| UM | gene duplication in absence of inactive or decreased activity allele | Select alternative, monitor plasma concentration | Published controlled studies |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Desipramine
+* **SNP recommendations:** consider alternative agents in CYP2D6 rapid metabolizers or poor metabolizers and 25% dose reduction for intermediate metabolizers.
+* **SNP dosing recommendation:** TCAs have comparable pharmacokinetic profiles, may be reasonable to apply CPIC dosing guidelines for Amitriptyline/nortriptyline and CYP2C19, CYP2D6 to other tricyclics including desipramine.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Imipramine
+
+* **SNP recommendations:** consider alternative agent in CYP2D6, CYP2C19 ultra-rapid metabolizers and CYP2D6 poor metabolizers. 50% reduction in CYP2C19 poor metabolizers and 25% reduction in CYP2D6 intermediate metabolizers
+* **SNP dosing recommendation:** TCAs have comparable pharmacokinetic profiles, may be reasonable to apply CPIC dosing guidelines for Amitriptyline/nortriptyline and CYP2C19, CYP2D6 to other tricyclics including imipramine.
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Nortriptyline
+* **SNP recommendations:** 25% dose reduction for CYP2D6 intermediate metabolizers; alternative agent for CYP2D6 ultra-rapid or poor metabolizers
+
+| Phenotype | Recommendation | Evidence |
+| --- | --- | --- |
+| PM | Reduce dose by 60% and monitor plasma concentration | Published clinical trials |
+| IM | Reduce dose by 40% and monitor plasma concentration | Publish clinical trials |
+| UM | Select alternative drug (citalopram, sertraline) or increase dose by 60% and monitor | Published clinical trials |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Doxepin
+* **SNP recommendations:** 50% dose reduction for CYP2C19 poor metabolizers and 25% reduction for CYP2D6 intermediate metabolizers; alternate agent recommended for CYP2D6 ultra-rapid metabolizers and poor metabolizers
+
+| Phenotype | Recommendation | Evidence |
+| --- | --- | --- |
+| PM | Reduce dose by 60%, adjust maintenance to response | Published controlled studies |
+| IM | Reduce dose by 20%, adjust maintenance to response | Published controlled studies |
+| UM | Select alternate agent (citalopram, sertraline) or increase dose by 100% | Published controlled studies |
+</script>
+</section>
+</section>
+
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Selective serotonin reuptake inhibitors (SSRIs)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Citalopram
+|Phenotype | Genotype | Recommendation | Evidence |
+| --- | --- | --- | --- |
+| Ultra rapid (UM) | CYP2C19\*17/\*17, CYP2C19\*1/\*17 | Consider alternate agent | Moderate |
+| Extensive (EM)| CYP2C19\*1/\*1 | Initiate with recommended starting dose | Strong | 
+| Intermediate (IM)| CYP2C19\*1/\*2, CYP2C19\*1/\*3, CYP2C19\*2/\*17 | Use recommended starting dose | Strong |
+| Poor (PM)| CYP2C19\*2/\*2 | Consider 50% reduction in starting dose | Moderate |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Escitalopram
+|Phenotype | Genotype | Recommendation | Evidence |
+| --- | --- | --- | --- |
+| UM | CYP2C19\*17/\*17, CYP2C19\*1/\*17 | Consider alternate agent | Moderate |
+| EM | CYP2C19\*1/\*1 | Initiate with recommended starting dose | Strong |
+| IM | CYP2C19\*1/\*2, CYP2C19\*1/\*3, CYP2C19\*2/\*17 | Use recommended starting dose | Strong |
+| PM | CYP2C19\*2/\*2 | Consider 50% reduction in starting dose | Moderate |
+
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Fluvoxamine
+* **SNP recommendation:** consider 25-50% reduction in starting dose and titrate to response or use alternate in CYP2D6 poor metabolizers
+
+| Phenotype | CYP2D6 Genotype | Implication | Recommendation | Evidence |
+| --- | --- | --- | --- | --- |
+| UM | duplications of functional alleles | No data | No data | Optional |
+| EM | two normal, two decreased fxn, normal/null, normal/decreased | Normal metabolism | Initiate at recommended starting dose | Strong |
+| IM | decreased function/null | Reduced metabolism | Initiate therapy at recommended starting dose | Moderate |
+| PM | null/null | Greatly reduced metabolism | 25-50% dose reduction | Optional |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Paroxetine
+* **SNP recommendations:** select alternate or 50% reduction in starting dose in CYP2D6 poor metabolizers
+
+| Phenotype | CYP2D6 Genotype | Implication | Recommendation | Evidence |
+| --- | --- | --- | --- | --- |
+| UM | duplications of functional alleles | Increased metabolism | Select alternate | Strong |
+| EM | two normal, two decreased fxn, normal/null,  normal/decrease | Normal metabolism | Initiate at recommended starting dose | Strong |
+| IM | decreased function/null | Reduced metabolism | Initiate therapy at recommended starting dose | Moderate |
+| PM | null/null | Greatly reduced metabolism | Select alternate or 50% reduction | Optional |
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Sertraline
+
+| Phenotype | CYP2C19 Genotype | Implication | Recommendation | Evidence |
+| --- | --- | --- | --- | --- |
+| UM | duplications of functional alleles | Increased metabolism | Initiate therapy at recommended starting dose | Optional |
+| EM | two normal alleles | Normal metabolism | Initiate therapy at recommended starting dose | Strong |
+| IM | normal, increased fxn/null | Reduced metabolism | Initiate therapy at recommended starting dose | Strong |
+| PM | null/null | Greatly reduced metabolism | Consider 50% of recommended starting dose | Optional |
+</script>
+</section>
+</section>
+
+
+
+<section>
+<section data-markdown>
+<script type="text/template">
+# Serotonin-norepinephrine reuptake inhibitor (SNRIs)
+</script>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+## Venlafaxine
+* **SNP recommendations:** Select alternate agent in CYP2D6 poor and intermediate metabolizers. For CYP2D6 ultra-rapid metabolizers, titrate dose to maximum of 150% of normal dose or select alternate
+
+| CYP2D6 Phenotype | Recommendation | Evidence |
+| --- | --- | --- |
+| UM (gene duplication in absence of inactive) | Be alert to decreased venlafaxine, titrate to maximum of 150% starting dose | Published controlled studies |
+| PM (decreased activity) | Be alert of increased plasma activity; select alternative (citalopram, sertraline) | Published controlled studies |
+</script>
+</section>
+</section>
+
+        </div>
+        <script src="../reveal/lib/js/head.min.js"></script>
+        <script src="../reveal/js/reveal.js"></script>
+        <script>
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../reveal/plugin/zoom-js/zoom.js', async: true },
+                    { src: '../reveal/plugin/notes/notes.js', async: true }
+                ]
+            });
+
+        </script>
+    </body>
+</html>
