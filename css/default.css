@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #6b98ae;
+  color: #1b7ea1;
   text-decoration: none;
 }
 
@@ -33,7 +33,7 @@ h2 {
     font-size: 30px;
     font-family: 'Cambo', serif;
     margin-bottom: 1px;
-    color: #6b98ae;
+    color: #1b7ea1;
 }
 
 h3 {
@@ -125,7 +125,7 @@ h1
 }
 
 #home {
-  background: #6b98ae;
+  background: #1b7ea1;
   height: 530px;
   padding-top: 280px;
   width: 100%;
@@ -251,7 +251,7 @@ a.githubicon:hover {
 
 
 #footer {
-  background: url("img/footer.gif") repeat-x scroll center bottom #6b98ae;
+  background: url("img/footer.gif") repeat-x scroll center bottom #1b7ea1;
   height: 70px;
   margin: 0px auto;
 }
@@ -313,7 +313,7 @@ a.githubicon:hover {
 .page_container h3{
   font-size: 20px;
   opacity: 0.85;
-  color: #6b98ae;
+  color: #1b7ea1;
   padding-top: 10px;
 }
 
