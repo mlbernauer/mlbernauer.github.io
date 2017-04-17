@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: #1b7ea1;
+  color: #173753;
   text-decoration: none;
 }
 
@@ -26,14 +26,13 @@ p {
   font-size: 15px;
   line-height: 1.3;
   font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue", Helvetica, sans-serif;
-
 }
 
 h2 {
     font-size: 30px;
     font-family: 'Cambo', serif;
     margin-bottom: 1px;
-    color: #1b7ea1;
+    color: #173753;
 }
 
 h3 {
@@ -125,7 +124,7 @@ h1
 }
 
 #home {
-  background: #1b7ea1;
+  background: #173753;
   height: 530px;
   padding-top: 280px;
   width: 100%;
@@ -251,7 +250,7 @@ a.githubicon:hover {
 
 
 #footer {
-  background: url("img/footer.gif") repeat-x scroll center bottom #1b7ea1;
+  background: url("img/footer.gif") repeat-x scroll center bottom #173753;
   height: 70px;
   margin: 0px auto;
 }
@@ -313,7 +312,7 @@ a.githubicon:hover {
 .page_container h3{
   font-size: 20px;
   opacity: 0.85;
-  color: #1b7ea1;
+  color: #173753;
   padding-top: 10px;
 }
 
