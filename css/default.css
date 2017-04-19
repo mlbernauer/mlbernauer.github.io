@@ -29,7 +29,8 @@ p {
 }
 
 h1 {
- font-family: 'Oswald', serif;
+/* font-family: 'Oswald', serif;*/
+ font-family: 'Calibri';
  text-transform: uppercase;
  font-size: 55px;
  letter-spacing: 1px;
